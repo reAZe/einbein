@@ -4,7 +4,7 @@ Workflow
 Upload:
 $git add --all
 $git commit -m "Version"
-$git push
+$git push origin master
 
 
 Download
