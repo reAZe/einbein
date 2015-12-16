@@ -22,8 +22,9 @@ CSControll::CSControll(double ts) :
     vorKinController(),
     trajektorie_xf(ts), trajektorie_yf(ts), trajektorie_zf(ts),
     deMux_Pf0(), deMux_xSoll(), deMuxConstInput(), deMux_Saturation(),
-//     pDV_xf(40.0, 50.0, 0.05, ts), pDV_yf(40.0, 50.0, 0.05, ts), pDV_zf(40.0, 50.0, 0.05, ts),
-    pDV_xf(45.0, 88.0, 0.05, ts), pDV_yf(45.0, 88.0, 0.05, ts), pDV_zf(224.0, 440.0, 0.05, ts),
+    pDV_xf(0.222*98696.0, 0.05*454.0, 0.05, ts), pDV_yf(0.222*98696.0, 0.055*454.0, 0.05, ts), pDV_zf(0.222*98696.0, 0.05*454.0, 0.05, ts),
+    //    pDV_xf(224.0, 440.0*0.5, 0.05, ts), pDV_yf(224.0, 440.0*0.5, 0.05, ts), pDV_zf(224.0, 440.0*0.5, 0.05, ts),
+    //    pDV_xf(45.0, 88.0, 0.05, ts), pDV_yf(45.0, 88.0, 0.05, ts), pDV_zf(224.0, 440.0, 0.05, ts),
     mux_FRegler(),
     constInput_f(),
     timedomain("Main time domain", ts, true){
@@ -122,11 +123,11 @@ CSControll::CSControll(double ts) :
 
 //Vorwärtskinemtaik mit Trajektiorenregelung
 
-      x_Soll.setValue({0.0,0.0,-0.6}); //x,y,z
+      x_Soll.setValue({0.0, 0.0, -0.6}); //x,y,z
       alpha1.setValue(0.0);
       beta1.setValue(0.0);
       gamma1.setValue(0.0);
-      T_sprung.setValue(1.0);
+      T_sprung.setValue(0.4);
       constInput_f.getIn_xSoll().connect(x_Soll.getOut());
       constInput_f.getIn_xStart().connect(vorKinController.getOut_Pf_0());
       //T_sprung der Trajektorie setzen
@@ -170,7 +171,7 @@ CSControll::CSControll(double ts) :
       pMotor.getIn_d_enc().connect(encoder.getOut_d_enc());
       //Motormodell
       motorModell.getIn_FM_Soll().connect(pMotor.getOut_FSollMot());
-      saturation.getIn().connect(motorModell.getOut_IM_Soll());
+      saturation.getIn().connect(motorModell.getOut_IM_Soll());   
       deMux_Saturation.getIn().connect(saturation.getOut());
       i2DAC.getIn_Voltage().connect(saturation.getOut());
       
@@ -208,15 +209,6 @@ CSControll::CSControll(double ts) :
       timedomain.addBlock(&i2DAC);
 
 
-
-
-      
-
-      
-      
-      
-      
-      
     
    printf("\nAdd Block to run-Methode\n");
     

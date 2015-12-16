@@ -136,7 +136,7 @@ int main() {
 	
 	
 	// create control system
-	CSControll cSControll(0.001);
+	CSControll cSControll(0.001); //schneller als Nachstellzeit PD-Regler
 	
 	// initialize hardware
 	cSControll.start();
@@ -170,9 +170,10 @@ int main() {
 // 		//std::cout << "Saturation I	: " << cSControll.saturation.getOut().getSignal().getValue() << "  [m]" << std::endl;
 // 		//Reset Encoder
 // 		
-// 		std::cout << "FSollMot_p_Out	: " << cSControll.pMotor.getOut_FSollMot().getSignal().getValue() << "  [V]" << std::endl;
-// 		std::cout << "Saturation	: " << cSControll.saturation.getIn().getSignal().getValue() << "  [V]" << std::endl;
-// 		std::cout << "dac		: " << cSControll.i2DAC.getIn_Voltage().getSignal().getValue() << "  [V]" << std::endl;
+//  		std::cout << "FSollMot_p_Out	: " << cSControll.pMotor.getOut_FSollMot().getSignal().getValue() << "  [V]" << std::endl;
+//  		std::cout << "Saturation In	: " << cSControll.saturation.getIn().getSignal().getValue() << "  [V]" << std::endl;
+//  		std::cout << "Saturation Out	: " << cSControll.saturation.getOut().getSignal().getValue() << "  [V]" << std::endl; 		
+//		std::cout << "dac		: " << cSControll.i2DAC.getIn_Voltage().getSignal().getValue() << "  [V]" << std::endl;
 		
 		//Ausgabe Trajektorie [xf_Trajekt, yf_Trajekt, zf_Trajekt, xf_ist, yf_ist, zf_ist, , xf_soll, yf_soll, zf_soll]
 		/*printf("%f;  %f; %f;  %f;  %f;  %f;  %f;  %f;  %f\n", 	
@@ -182,14 +183,24 @@ int main() {
 		);*/
 		
 		
-		//Ausgabe Regelgrösse [xf_ist, yf_ist, zf_ist, , xf_soll, yf_soll, zf_soll, FxSoll, FySoll, FzSoll, M1_Saturation, M2_Saturation, M3_Saturation, FM1, FM2, FM3]
-		printf("%f;  %f; %f;  %f;  %f;  %f;  %f;  %f;  %f; %f; %f; %f; %f; %f; %f\n", 
+		//Ausgabe Regelgrösse [xf_ist, yf_ist, zf_ist, , xf_soll, yf_soll, zf_soll, FxSoll, FySoll, FzSoll,
+		//		      M1_Saturation, M2_Saturation, M3_Saturation, FM1, FM2, FM3, d_istX, d_distY, d_distZ
+		//			xSollTraje, ySollTraje, zSollTraje]
+		printf("%f;  %f; %f;  %f;  %f;  %f;  %f;  %f;  %f; %f; %f; %f; %f; %f; %f; %f; %f; %f; %f; %f; %f\n", 
 			cSControll.deMux_Pf0.getOut(0).getSignal().getValue(), cSControll.deMux_Pf0.getOut(1).getSignal().getValue(), cSControll.deMux_Pf0.getOut(2).getSignal().getValue(),
 			cSControll.deMux_xSoll.getOut(0).getSignal().getValue(), cSControll.deMux_xSoll.getOut(1).getSignal().getValue(), cSControll.deMux_xSoll.getOut(2).getSignal().getValue(), 
 			cSControll.pDV_xf.getOut_F_0().getSignal().getValue(), cSControll.pDV_yf.getOut_F_0().getSignal().getValue(), cSControll.pDV_zf.getOut_F_0().getSignal().getValue(),
 			cSControll.deMux_Saturation.getOut(0).getSignal().getValue(), cSControll.deMux_Saturation.getOut(1).getSignal().getValue(), cSControll.deMux_Saturation.getOut(2).getSignal().getValue(),
-			cSControll.deMux_vorKin.getOut(0).getSignal().getValue(), cSControll.deMux_vorKin.getOut(1).getSignal().getValue(), cSControll.deMux_vorKin.getOut(0).getSignal().getValue()
+			cSControll.deMux_vorKin.getOut(0).getSignal().getValue(), cSControll.deMux_vorKin.getOut(1).getSignal().getValue(), cSControll.deMux_vorKin.getOut(2).getSignal().getValue(),
+			cSControll.pDV_xf.getOut_d_xIst_0().getSignal().getValue(), cSControll.pDV_yf.getOut_d_xIst_0().getSignal().getValue(), cSControll.pDV_zf.getOut_d_xIst_0().getSignal().getValue(),
+			cSControll.trajektorie_xf.getOut_x_d().getSignal().getValue(), cSControll.trajektorie_yf.getOut_x_d().getSignal().getValue(), cSControll.trajektorie_zf.getOut_x_d().getSignal().getValue()
+		  
+			
 		);
+// 		
+		
+
+		
 		
 	      if (!TasterRes1.get()){
 		
@@ -247,8 +258,8 @@ int main() {
 		}//end if Taster 3
 
 		
-		//sleep(0.5);
-		usleep(100000);
+		sleep(1);
+		//usleep(100000);
 	}
 	
 	
