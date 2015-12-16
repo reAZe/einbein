@@ -98,14 +98,326 @@ depend:
 	cd /home/dejan/projects/einbein/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/Test/Regelung/CMakeFiles/Controll.dir/rule:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f CMakeFiles/Makefile2 src/Test/Regelung/CMakeFiles/Controll.dir/rule
+.PHONY : src/Test/Regelung/CMakeFiles/Controll.dir/rule
+
+# Convenience name for target.
+Controll: src/Test/Regelung/CMakeFiles/Controll.dir/rule
+.PHONY : Controll
+
+# fast build rule for target.
+Controll/fast:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/build
+.PHONY : Controll/fast
+
+Base2Tool/VorKin.o: Base2Tool/VorKin.cpp.o
+.PHONY : Base2Tool/VorKin.o
+
+# target to build an object file
+Base2Tool/VorKin.cpp.o:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Base2Tool/VorKin.cpp.o
+.PHONY : Base2Tool/VorKin.cpp.o
+
+Base2Tool/VorKin.i: Base2Tool/VorKin.cpp.i
+.PHONY : Base2Tool/VorKin.i
+
+# target to preprocess a source file
+Base2Tool/VorKin.cpp.i:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Base2Tool/VorKin.cpp.i
+.PHONY : Base2Tool/VorKin.cpp.i
+
+Base2Tool/VorKin.s: Base2Tool/VorKin.cpp.s
+.PHONY : Base2Tool/VorKin.s
+
+# target to generate assembly for a file
+Base2Tool/VorKin.cpp.s:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Base2Tool/VorKin.cpp.s
+.PHONY : Base2Tool/VorKin.cpp.s
+
+CSControll.o: CSControll.cpp.o
+.PHONY : CSControll.o
+
+# target to build an object file
+CSControll.cpp.o:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o
+.PHONY : CSControll.cpp.o
+
+CSControll.i: CSControll.cpp.i
+.PHONY : CSControll.i
+
+# target to preprocess a source file
+CSControll.cpp.i:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.i
+.PHONY : CSControll.cpp.i
+
+CSControll.s: CSControll.cpp.s
+.PHONY : CSControll.s
+
+# target to generate assembly for a file
+CSControll.cpp.s:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.s
+.PHONY : CSControll.cpp.s
+
+Encoder/Encoder.o: Encoder/Encoder.cpp.o
+.PHONY : Encoder/Encoder.o
+
+# target to build an object file
+Encoder/Encoder.cpp.o:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Encoder/Encoder.cpp.o
+.PHONY : Encoder/Encoder.cpp.o
+
+Encoder/Encoder.i: Encoder/Encoder.cpp.i
+.PHONY : Encoder/Encoder.i
+
+# target to preprocess a source file
+Encoder/Encoder.cpp.i:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Encoder/Encoder.cpp.i
+.PHONY : Encoder/Encoder.cpp.i
+
+Encoder/Encoder.s: Encoder/Encoder.cpp.s
+.PHONY : Encoder/Encoder.s
+
+# target to generate assembly for a file
+Encoder/Encoder.cpp.s:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Encoder/Encoder.cpp.s
+.PHONY : Encoder/Encoder.cpp.s
+
+Encoder/TransitionBlockEncoder.o: Encoder/TransitionBlockEncoder.cpp.o
+.PHONY : Encoder/TransitionBlockEncoder.o
+
+# target to build an object file
+Encoder/TransitionBlockEncoder.cpp.o:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Encoder/TransitionBlockEncoder.cpp.o
+.PHONY : Encoder/TransitionBlockEncoder.cpp.o
+
+Encoder/TransitionBlockEncoder.i: Encoder/TransitionBlockEncoder.cpp.i
+.PHONY : Encoder/TransitionBlockEncoder.i
+
+# target to preprocess a source file
+Encoder/TransitionBlockEncoder.cpp.i:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Encoder/TransitionBlockEncoder.cpp.i
+.PHONY : Encoder/TransitionBlockEncoder.cpp.i
+
+Encoder/TransitionBlockEncoder.s: Encoder/TransitionBlockEncoder.cpp.s
+.PHONY : Encoder/TransitionBlockEncoder.s
+
+# target to generate assembly for a file
+Encoder/TransitionBlockEncoder.cpp.s:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Encoder/TransitionBlockEncoder.cpp.s
+.PHONY : Encoder/TransitionBlockEncoder.cpp.s
+
+MotorModell/I2DAC.o: MotorModell/I2DAC.cpp.o
+.PHONY : MotorModell/I2DAC.o
+
+# target to build an object file
+MotorModell/I2DAC.cpp.o:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/MotorModell/I2DAC.cpp.o
+.PHONY : MotorModell/I2DAC.cpp.o
+
+MotorModell/I2DAC.i: MotorModell/I2DAC.cpp.i
+.PHONY : MotorModell/I2DAC.i
+
+# target to preprocess a source file
+MotorModell/I2DAC.cpp.i:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/MotorModell/I2DAC.cpp.i
+.PHONY : MotorModell/I2DAC.cpp.i
+
+MotorModell/I2DAC.s: MotorModell/I2DAC.cpp.s
+.PHONY : MotorModell/I2DAC.s
+
+# target to generate assembly for a file
+MotorModell/I2DAC.cpp.s:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/MotorModell/I2DAC.cpp.s
+.PHONY : MotorModell/I2DAC.cpp.s
+
+MotorModell/MotorModell.o: MotorModell/MotorModell.cpp.o
+.PHONY : MotorModell/MotorModell.o
+
+# target to build an object file
+MotorModell/MotorModell.cpp.o:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/MotorModell/MotorModell.cpp.o
+.PHONY : MotorModell/MotorModell.cpp.o
+
+MotorModell/MotorModell.i: MotorModell/MotorModell.cpp.i
+.PHONY : MotorModell/MotorModell.i
+
+# target to preprocess a source file
+MotorModell/MotorModell.cpp.i:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/MotorModell/MotorModell.cpp.i
+.PHONY : MotorModell/MotorModell.cpp.i
+
+MotorModell/MotorModell.s: MotorModell/MotorModell.cpp.s
+.PHONY : MotorModell/MotorModell.s
+
+# target to generate assembly for a file
+MotorModell/MotorModell.cpp.s:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/MotorModell/MotorModell.cpp.s
+.PHONY : MotorModell/MotorModell.cpp.s
+
+PDV/PDV.o: PDV/PDV.cpp.o
+.PHONY : PDV/PDV.o
+
+# target to build an object file
+PDV/PDV.cpp.o:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/PDV/PDV.cpp.o
+.PHONY : PDV/PDV.cpp.o
+
+PDV/PDV.i: PDV/PDV.cpp.i
+.PHONY : PDV/PDV.i
+
+# target to preprocess a source file
+PDV/PDV.cpp.i:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/PDV/PDV.cpp.i
+.PHONY : PDV/PDV.cpp.i
+
+PDV/PDV.s: PDV/PDV.cpp.s
+.PHONY : PDV/PDV.s
+
+# target to generate assembly for a file
+PDV/PDV.cpp.s:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/PDV/PDV.cpp.s
+.PHONY : PDV/PDV.cpp.s
+
+PMotor/PMotor.o: PMotor/PMotor.cpp.o
+.PHONY : PMotor/PMotor.o
+
+# target to build an object file
+PMotor/PMotor.cpp.o:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/PMotor/PMotor.cpp.o
+.PHONY : PMotor/PMotor.cpp.o
+
+PMotor/PMotor.i: PMotor/PMotor.cpp.i
+.PHONY : PMotor/PMotor.i
+
+# target to preprocess a source file
+PMotor/PMotor.cpp.i:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/PMotor/PMotor.cpp.i
+.PHONY : PMotor/PMotor.cpp.i
+
+PMotor/PMotor.s: PMotor/PMotor.cpp.s
+.PHONY : PMotor/PMotor.s
+
+# target to generate assembly for a file
+PMotor/PMotor.cpp.s:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/PMotor/PMotor.cpp.s
+.PHONY : PMotor/PMotor.cpp.s
+
+Trajektorie/Trajektorie.o: Trajektorie/Trajektorie.cpp.o
+.PHONY : Trajektorie/Trajektorie.o
+
+# target to build an object file
+Trajektorie/Trajektorie.cpp.o:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Trajektorie/Trajektorie.cpp.o
+.PHONY : Trajektorie/Trajektorie.cpp.o
+
+Trajektorie/Trajektorie.i: Trajektorie/Trajektorie.cpp.i
+.PHONY : Trajektorie/Trajektorie.i
+
+# target to preprocess a source file
+Trajektorie/Trajektorie.cpp.i:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Trajektorie/Trajektorie.cpp.i
+.PHONY : Trajektorie/Trajektorie.cpp.i
+
+Trajektorie/Trajektorie.s: Trajektorie/Trajektorie.cpp.s
+.PHONY : Trajektorie/Trajektorie.s
+
+# target to generate assembly for a file
+Trajektorie/Trajektorie.cpp.s:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Trajektorie/Trajektorie.cpp.s
+.PHONY : Trajektorie/Trajektorie.cpp.s
+
+Trajektorie/constInput.o: Trajektorie/constInput.cpp.o
+.PHONY : Trajektorie/constInput.o
+
+# target to build an object file
+Trajektorie/constInput.cpp.o:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Trajektorie/constInput.cpp.o
+.PHONY : Trajektorie/constInput.cpp.o
+
+Trajektorie/constInput.i: Trajektorie/constInput.cpp.i
+.PHONY : Trajektorie/constInput.i
+
+# target to preprocess a source file
+Trajektorie/constInput.cpp.i:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Trajektorie/constInput.cpp.i
+.PHONY : Trajektorie/constInput.cpp.i
+
+Trajektorie/constInput.s: Trajektorie/constInput.cpp.s
+.PHONY : Trajektorie/constInput.s
+
+# target to generate assembly for a file
+Trajektorie/constInput.cpp.s:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Trajektorie/constInput.cpp.s
+.PHONY : Trajektorie/constInput.cpp.s
+
+mainControll.o: mainControll.cpp.o
+.PHONY : mainControll.o
+
+# target to build an object file
+mainControll.cpp.o:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o
+.PHONY : mainControll.cpp.o
+
+mainControll.i: mainControll.cpp.i
+.PHONY : mainControll.i
+
+# target to preprocess a source file
+mainControll.cpp.i:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.i
+.PHONY : mainControll.cpp.i
+
+mainControll.s: mainControll.cpp.s
+.PHONY : mainControll.s
+
+# target to generate assembly for a file
+mainControll.cpp.s:
+	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.s
+.PHONY : mainControll.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... Controll"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Base2Tool/VorKin.o"
+	@echo "... Base2Tool/VorKin.i"
+	@echo "... Base2Tool/VorKin.s"
+	@echo "... CSControll.o"
+	@echo "... CSControll.i"
+	@echo "... CSControll.s"
+	@echo "... Encoder/Encoder.o"
+	@echo "... Encoder/Encoder.i"
+	@echo "... Encoder/Encoder.s"
+	@echo "... Encoder/TransitionBlockEncoder.o"
+	@echo "... Encoder/TransitionBlockEncoder.i"
+	@echo "... Encoder/TransitionBlockEncoder.s"
+	@echo "... MotorModell/I2DAC.o"
+	@echo "... MotorModell/I2DAC.i"
+	@echo "... MotorModell/I2DAC.s"
+	@echo "... MotorModell/MotorModell.o"
+	@echo "... MotorModell/MotorModell.i"
+	@echo "... MotorModell/MotorModell.s"
+	@echo "... PDV/PDV.o"
+	@echo "... PDV/PDV.i"
+	@echo "... PDV/PDV.s"
+	@echo "... PMotor/PMotor.o"
+	@echo "... PMotor/PMotor.i"
+	@echo "... PMotor/PMotor.s"
+	@echo "... Trajektorie/Trajektorie.o"
+	@echo "... Trajektorie/Trajektorie.i"
+	@echo "... Trajektorie/Trajektorie.s"
+	@echo "... Trajektorie/constInput.o"
+	@echo "... Trajektorie/constInput.i"
+	@echo "... Trajektorie/constInput.s"
+	@echo "... mainControll.o"
+	@echo "... mainControll.i"
+	@echo "... mainControll.s"
 .PHONY : help
 
 

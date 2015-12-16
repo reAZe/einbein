@@ -208,78 +208,6 @@ mpu9250/MahonyAHRS.c.s:
 	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/mpu9250/CMakeFiles/mpu9250.dir/build.make src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/MahonyAHRS.c.s
 .PHONY : mpu9250/MahonyAHRS.c.s
 
-mpu9250/mpu9250.o: mpu9250/mpu9250.c.o
-.PHONY : mpu9250/mpu9250.o
-
-# target to build an object file
-mpu9250/mpu9250.c.o:
-	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/mpu9250/CMakeFiles/mpu9250.dir/build.make src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.o
-.PHONY : mpu9250/mpu9250.c.o
-
-mpu9250/mpu9250.i: mpu9250/mpu9250.c.i
-.PHONY : mpu9250/mpu9250.i
-
-# target to preprocess a source file
-mpu9250/mpu9250.c.i:
-	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/mpu9250/CMakeFiles/mpu9250.dir/build.make src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.i
-.PHONY : mpu9250/mpu9250.c.i
-
-mpu9250/mpu9250.s: mpu9250/mpu9250.c.s
-.PHONY : mpu9250/mpu9250.s
-
-# target to generate assembly for a file
-mpu9250/mpu9250.c.s:
-	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/mpu9250/CMakeFiles/mpu9250.dir/build.make src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.s
-.PHONY : mpu9250/mpu9250.c.s
-
-mpu9250/quaternion.o: mpu9250/quaternion.c.o
-.PHONY : mpu9250/quaternion.o
-
-# target to build an object file
-mpu9250/quaternion.c.o:
-	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/mpu9250/CMakeFiles/mpu9250.dir/build.make src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.o
-.PHONY : mpu9250/quaternion.c.o
-
-mpu9250/quaternion.i: mpu9250/quaternion.c.i
-.PHONY : mpu9250/quaternion.i
-
-# target to preprocess a source file
-mpu9250/quaternion.c.i:
-	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/mpu9250/CMakeFiles/mpu9250.dir/build.make src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.i
-.PHONY : mpu9250/quaternion.c.i
-
-mpu9250/quaternion.s: mpu9250/quaternion.c.s
-.PHONY : mpu9250/quaternion.s
-
-# target to generate assembly for a file
-mpu9250/quaternion.c.s:
-	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/mpu9250/CMakeFiles/mpu9250.dir/build.make src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.s
-.PHONY : mpu9250/quaternion.c.s
-
-mpu9250/vector3d.o: mpu9250/vector3d.c.o
-.PHONY : mpu9250/vector3d.o
-
-# target to build an object file
-mpu9250/vector3d.c.o:
-	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/mpu9250/CMakeFiles/mpu9250.dir/build.make src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.o
-.PHONY : mpu9250/vector3d.c.o
-
-mpu9250/vector3d.i: mpu9250/vector3d.c.i
-.PHONY : mpu9250/vector3d.i
-
-# target to preprocess a source file
-mpu9250/vector3d.c.i:
-	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/mpu9250/CMakeFiles/mpu9250.dir/build.make src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.i
-.PHONY : mpu9250/vector3d.c.i
-
-mpu9250/vector3d.s: mpu9250/vector3d.c.s
-.PHONY : mpu9250/vector3d.s
-
-# target to generate assembly for a file
-mpu9250/vector3d.c.s:
-	cd /home/dejan/projects/einbein/build && $(MAKE) -f src/mpu9250/CMakeFiles/mpu9250.dir/build.make src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.s
-.PHONY : mpu9250/vector3d.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -301,15 +229,6 @@ help:
 	@echo "... mpu9250/MahonyAHRS.o"
 	@echo "... mpu9250/MahonyAHRS.i"
 	@echo "... mpu9250/MahonyAHRS.s"
-	@echo "... mpu9250/mpu9250.o"
-	@echo "... mpu9250/mpu9250.i"
-	@echo "... mpu9250/mpu9250.s"
-	@echo "... mpu9250/quaternion.o"
-	@echo "... mpu9250/quaternion.i"
-	@echo "... mpu9250/quaternion.s"
-	@echo "... mpu9250/vector3d.o"
-	@echo "... mpu9250/vector3d.i"
-	@echo "... mpu9250/vector3d.s"
 .PHONY : help
 
 

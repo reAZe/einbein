@@ -79,7 +79,7 @@ src/preinstall: src/Test/preinstall
 src/CMakeFiles/einbein.dir/all:
 	$(MAKE) -f src/CMakeFiles/einbein.dir/build.make src/CMakeFiles/einbein.dir/depend
 	$(MAKE) -f src/CMakeFiles/einbein.dir/build.make src/CMakeFiles/einbein.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  9
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  40
 	@echo "Built target einbein"
 .PHONY : src/CMakeFiles/einbein.dir/all
 
@@ -129,7 +129,7 @@ src/mpu9250/preinstall:
 src/mpu9250/CMakeFiles/mpu9250.dir/all:
 	$(MAKE) -f src/mpu9250/CMakeFiles/mpu9250.dir/build.make src/mpu9250/CMakeFiles/mpu9250.dir/depend
 	$(MAKE) -f src/mpu9250/CMakeFiles/mpu9250.dir/build.make src/mpu9250/CMakeFiles/mpu9250.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  12 13 14 15 16 17 18
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  42 43 44 45
 	@echo "Built target mpu9250"
 .PHONY : src/mpu9250/CMakeFiles/mpu9250.dir/all
 
@@ -139,7 +139,7 @@ all: src/mpu9250/CMakeFiles/mpu9250.dir/all
 
 # Build rule for subdir invocation for target.
 src/mpu9250/CMakeFiles/mpu9250.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 src/mpu9250/CMakeFiles/mpu9250.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 0
 .PHONY : src/mpu9250/CMakeFiles/mpu9250.dir/rule
@@ -176,19 +176,74 @@ src/Test/preinstall: src/Test/Regelung/preinstall
 # Directory level rules for directory src/Test/Regelung
 
 # Convenience name for "all" pass in the directory.
+src/Test/Regelung/all: src/Test/Regelung/CMakeFiles/Controll.dir/all
 src/Test/Regelung/all: src/Test/Regelung/Trajektorie/all
-src/Test/Regelung/all: src/Test/Regelung/Fusspunkt/all
+src/Test/Regelung/all: src/Test/Regelung/Base2Tool/all
+src/Test/Regelung/all: src/Test/Regelung/Controller/all
+src/Test/Regelung/all: src/Test/Regelung/PDV/all
+src/Test/Regelung/all: src/Test/Regelung/Encoder/all
+src/Test/Regelung/all: src/Test/Regelung/PMotor/all
+src/Test/Regelung/all: src/Test/Regelung/IMU/all
+src/Test/Regelung/all: src/Test/Regelung/ZustBest/all
 .PHONY : src/Test/Regelung/all
 
 # Convenience name for "clean" pass in the directory.
+src/Test/Regelung/clean: src/Test/Regelung/CMakeFiles/Controll.dir/clean
 src/Test/Regelung/clean: src/Test/Regelung/Trajektorie/clean
-src/Test/Regelung/clean: src/Test/Regelung/Fusspunkt/clean
+src/Test/Regelung/clean: src/Test/Regelung/Base2Tool/clean
+src/Test/Regelung/clean: src/Test/Regelung/Controller/clean
+src/Test/Regelung/clean: src/Test/Regelung/PDV/clean
+src/Test/Regelung/clean: src/Test/Regelung/Encoder/clean
+src/Test/Regelung/clean: src/Test/Regelung/PMotor/clean
+src/Test/Regelung/clean: src/Test/Regelung/IMU/clean
+src/Test/Regelung/clean: src/Test/Regelung/ZustBest/clean
 .PHONY : src/Test/Regelung/clean
 
 # Convenience name for "preinstall" pass in the directory.
 src/Test/Regelung/preinstall: src/Test/Regelung/Trajektorie/preinstall
-src/Test/Regelung/preinstall: src/Test/Regelung/Fusspunkt/preinstall
+src/Test/Regelung/preinstall: src/Test/Regelung/Base2Tool/preinstall
+src/Test/Regelung/preinstall: src/Test/Regelung/Controller/preinstall
+src/Test/Regelung/preinstall: src/Test/Regelung/PDV/preinstall
+src/Test/Regelung/preinstall: src/Test/Regelung/Encoder/preinstall
+src/Test/Regelung/preinstall: src/Test/Regelung/PMotor/preinstall
+src/Test/Regelung/preinstall: src/Test/Regelung/IMU/preinstall
+src/Test/Regelung/preinstall: src/Test/Regelung/ZustBest/preinstall
 .PHONY : src/Test/Regelung/preinstall
+
+#=============================================================================
+# Target rules for target src/Test/Regelung/CMakeFiles/Controll.dir
+
+# All Build rule for target.
+src/Test/Regelung/CMakeFiles/Controll.dir/all:
+	$(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/depend
+	$(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11
+	@echo "Built target Controll"
+.PHONY : src/Test/Regelung/CMakeFiles/Controll.dir/all
+
+# Include target in all.
+all: src/Test/Regelung/CMakeFiles/Controll.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/Test/Regelung/CMakeFiles/Controll.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 11
+	$(MAKE) -f CMakeFiles/Makefile2 src/Test/Regelung/CMakeFiles/Controll.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 0
+.PHONY : src/Test/Regelung/CMakeFiles/Controll.dir/rule
+
+# Convenience name for target.
+Controll: src/Test/Regelung/CMakeFiles/Controll.dir/rule
+.PHONY : Controll
+
+# clean rule for target.
+src/Test/Regelung/CMakeFiles/Controll.dir/clean:
+	$(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/clean
+.PHONY : src/Test/Regelung/CMakeFiles/Controll.dir/clean
+
+# clean rule for target.
+clean: src/Test/Regelung/CMakeFiles/Controll.dir/clean
+.PHONY : clean
 
 #=============================================================================
 # Directory level rules for directory src/Test/Regelung/Trajektorie
@@ -212,7 +267,7 @@ src/Test/Regelung/Trajektorie/preinstall:
 src/Test/Regelung/Trajektorie/CMakeFiles/Trajektorie.dir/all:
 	$(MAKE) -f src/Test/Regelung/Trajektorie/CMakeFiles/Trajektorie.dir/build.make src/Test/Regelung/Trajektorie/CMakeFiles/Trajektorie.dir/depend
 	$(MAKE) -f src/Test/Regelung/Trajektorie/CMakeFiles/Trajektorie.dir/build.make src/Test/Regelung/Trajektorie/CMakeFiles/Trajektorie.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  4 5 6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  27 28 29
 	@echo "Built target Trajektorie"
 .PHONY : src/Test/Regelung/Trajektorie/CMakeFiles/Trajektorie.dir/all
 
@@ -241,53 +296,318 @@ clean: src/Test/Regelung/Trajektorie/CMakeFiles/Trajektorie.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory src/Test/Regelung/Fusspunkt
+# Directory level rules for directory src/Test/Regelung/Base2Tool
 
 # Convenience name for "all" pass in the directory.
-src/Test/Regelung/Fusspunkt/all: src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/all
-.PHONY : src/Test/Regelung/Fusspunkt/all
+src/Test/Regelung/Base2Tool/all: src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/all
+.PHONY : src/Test/Regelung/Base2Tool/all
 
 # Convenience name for "clean" pass in the directory.
-src/Test/Regelung/Fusspunkt/clean: src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/clean
-.PHONY : src/Test/Regelung/Fusspunkt/clean
+src/Test/Regelung/Base2Tool/clean: src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/clean
+.PHONY : src/Test/Regelung/Base2Tool/clean
 
 # Convenience name for "preinstall" pass in the directory.
-src/Test/Regelung/Fusspunkt/preinstall:
-.PHONY : src/Test/Regelung/Fusspunkt/preinstall
+src/Test/Regelung/Base2Tool/preinstall:
+.PHONY : src/Test/Regelung/Base2Tool/preinstall
 
 #=============================================================================
-# Target rules for target src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir
+# Target rules for target src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir
 
 # All Build rule for target.
-src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/all:
-	$(MAKE) -f src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/build.make src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/depend
-	$(MAKE) -f src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/build.make src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  1 2 3
+src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/all:
+	$(MAKE) -f src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/build.make src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/depend
+	$(MAKE) -f src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/build.make src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  18 19 20
 	@echo "Built target Fusspunkt"
-.PHONY : src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/all
+.PHONY : src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/all
 
 # Include target in all.
-all: src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/all
+all: src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/rule: cmake_check_build_system
+src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 0
-.PHONY : src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/rule
+.PHONY : src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/rule
 
 # Convenience name for target.
-Fusspunkt: src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/rule
+Fusspunkt: src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/rule
 .PHONY : Fusspunkt
 
 # clean rule for target.
-src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/clean:
-	$(MAKE) -f src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/build.make src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/clean
-.PHONY : src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/clean
+src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/clean:
+	$(MAKE) -f src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/build.make src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/clean
+.PHONY : src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/clean
 
 # clean rule for target.
-clean: src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/clean
+clean: src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory src/Test/Regelung/Controller
+
+# Convenience name for "all" pass in the directory.
+src/Test/Regelung/Controller/all: src/Test/Regelung/Controller/CMakeFiles/Controller.dir/all
+.PHONY : src/Test/Regelung/Controller/all
+
+# Convenience name for "clean" pass in the directory.
+src/Test/Regelung/Controller/clean: src/Test/Regelung/Controller/CMakeFiles/Controller.dir/clean
+.PHONY : src/Test/Regelung/Controller/clean
+
+# Convenience name for "preinstall" pass in the directory.
+src/Test/Regelung/Controller/preinstall:
+.PHONY : src/Test/Regelung/Controller/preinstall
+
+#=============================================================================
+# Target rules for target src/Test/Regelung/Controller/CMakeFiles/Controller.dir
+
+# All Build rule for target.
+src/Test/Regelung/Controller/CMakeFiles/Controller.dir/all:
+	$(MAKE) -f src/Test/Regelung/Controller/CMakeFiles/Controller.dir/build.make src/Test/Regelung/Controller/CMakeFiles/Controller.dir/depend
+	$(MAKE) -f src/Test/Regelung/Controller/CMakeFiles/Controller.dir/build.make src/Test/Regelung/Controller/CMakeFiles/Controller.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  12 13 14
+	@echo "Built target Controller"
+.PHONY : src/Test/Regelung/Controller/CMakeFiles/Controller.dir/all
+
+# Include target in all.
+all: src/Test/Regelung/Controller/CMakeFiles/Controller.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/Test/Regelung/Controller/CMakeFiles/Controller.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 src/Test/Regelung/Controller/CMakeFiles/Controller.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 0
+.PHONY : src/Test/Regelung/Controller/CMakeFiles/Controller.dir/rule
+
+# Convenience name for target.
+Controller: src/Test/Regelung/Controller/CMakeFiles/Controller.dir/rule
+.PHONY : Controller
+
+# clean rule for target.
+src/Test/Regelung/Controller/CMakeFiles/Controller.dir/clean:
+	$(MAKE) -f src/Test/Regelung/Controller/CMakeFiles/Controller.dir/build.make src/Test/Regelung/Controller/CMakeFiles/Controller.dir/clean
+.PHONY : src/Test/Regelung/Controller/CMakeFiles/Controller.dir/clean
+
+# clean rule for target.
+clean: src/Test/Regelung/Controller/CMakeFiles/Controller.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory src/Test/Regelung/PDV
+
+# Convenience name for "all" pass in the directory.
+src/Test/Regelung/PDV/all: src/Test/Regelung/PDV/CMakeFiles/PDV.dir/all
+.PHONY : src/Test/Regelung/PDV/all
+
+# Convenience name for "clean" pass in the directory.
+src/Test/Regelung/PDV/clean: src/Test/Regelung/PDV/CMakeFiles/PDV.dir/clean
+.PHONY : src/Test/Regelung/PDV/clean
+
+# Convenience name for "preinstall" pass in the directory.
+src/Test/Regelung/PDV/preinstall:
+.PHONY : src/Test/Regelung/PDV/preinstall
+
+#=============================================================================
+# Target rules for target src/Test/Regelung/PDV/CMakeFiles/PDV.dir
+
+# All Build rule for target.
+src/Test/Regelung/PDV/CMakeFiles/PDV.dir/all:
+	$(MAKE) -f src/Test/Regelung/PDV/CMakeFiles/PDV.dir/build.make src/Test/Regelung/PDV/CMakeFiles/PDV.dir/depend
+	$(MAKE) -f src/Test/Regelung/PDV/CMakeFiles/PDV.dir/build.make src/Test/Regelung/PDV/CMakeFiles/PDV.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  24 25 26
+	@echo "Built target PDV"
+.PHONY : src/Test/Regelung/PDV/CMakeFiles/PDV.dir/all
+
+# Include target in all.
+all: src/Test/Regelung/PDV/CMakeFiles/PDV.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/Test/Regelung/PDV/CMakeFiles/PDV.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 src/Test/Regelung/PDV/CMakeFiles/PDV.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 0
+.PHONY : src/Test/Regelung/PDV/CMakeFiles/PDV.dir/rule
+
+# Convenience name for target.
+PDV: src/Test/Regelung/PDV/CMakeFiles/PDV.dir/rule
+.PHONY : PDV
+
+# clean rule for target.
+src/Test/Regelung/PDV/CMakeFiles/PDV.dir/clean:
+	$(MAKE) -f src/Test/Regelung/PDV/CMakeFiles/PDV.dir/build.make src/Test/Regelung/PDV/CMakeFiles/PDV.dir/clean
+.PHONY : src/Test/Regelung/PDV/CMakeFiles/PDV.dir/clean
+
+# clean rule for target.
+clean: src/Test/Regelung/PDV/CMakeFiles/PDV.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory src/Test/Regelung/Encoder
+
+# Convenience name for "all" pass in the directory.
+src/Test/Regelung/Encoder/all: src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/all
+.PHONY : src/Test/Regelung/Encoder/all
+
+# Convenience name for "clean" pass in the directory.
+src/Test/Regelung/Encoder/clean: src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/clean
+.PHONY : src/Test/Regelung/Encoder/clean
+
+# Convenience name for "preinstall" pass in the directory.
+src/Test/Regelung/Encoder/preinstall:
+.PHONY : src/Test/Regelung/Encoder/preinstall
+
+#=============================================================================
+# Target rules for target src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir
+
+# All Build rule for target.
+src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/all:
+	$(MAKE) -f src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/build.make src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/depend
+	$(MAKE) -f src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/build.make src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  15 16 17
+	@echo "Built target Encoder"
+.PHONY : src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/all
+
+# Include target in all.
+all: src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 0
+.PHONY : src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/rule
+
+# Convenience name for target.
+Encoder: src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/rule
+.PHONY : Encoder
+
+# clean rule for target.
+src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/clean:
+	$(MAKE) -f src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/build.make src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/clean
+.PHONY : src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/clean
+
+# clean rule for target.
+clean: src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory src/Test/Regelung/PMotor
+
+# Convenience name for "all" pass in the directory.
+src/Test/Regelung/PMotor/all:
+.PHONY : src/Test/Regelung/PMotor/all
+
+# Convenience name for "clean" pass in the directory.
+src/Test/Regelung/PMotor/clean:
+.PHONY : src/Test/Regelung/PMotor/clean
+
+# Convenience name for "preinstall" pass in the directory.
+src/Test/Regelung/PMotor/preinstall:
+.PHONY : src/Test/Regelung/PMotor/preinstall
+
+#=============================================================================
+# Directory level rules for directory src/Test/Regelung/IMU
+
+# Convenience name for "all" pass in the directory.
+src/Test/Regelung/IMU/all: src/Test/Regelung/IMU/CMakeFiles/IMU.dir/all
+.PHONY : src/Test/Regelung/IMU/all
+
+# Convenience name for "clean" pass in the directory.
+src/Test/Regelung/IMU/clean: src/Test/Regelung/IMU/CMakeFiles/IMU.dir/clean
+.PHONY : src/Test/Regelung/IMU/clean
+
+# Convenience name for "preinstall" pass in the directory.
+src/Test/Regelung/IMU/preinstall:
+.PHONY : src/Test/Regelung/IMU/preinstall
+
+#=============================================================================
+# Target rules for target src/Test/Regelung/IMU/CMakeFiles/IMU.dir
+
+# All Build rule for target.
+src/Test/Regelung/IMU/CMakeFiles/IMU.dir/all: src/mpu9250/CMakeFiles/mpu9250.dir/all
+	$(MAKE) -f src/Test/Regelung/IMU/CMakeFiles/IMU.dir/build.make src/Test/Regelung/IMU/CMakeFiles/IMU.dir/depend
+	$(MAKE) -f src/Test/Regelung/IMU/CMakeFiles/IMU.dir/build.make src/Test/Regelung/IMU/CMakeFiles/IMU.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  21 22 23
+	@echo "Built target IMU"
+.PHONY : src/Test/Regelung/IMU/CMakeFiles/IMU.dir/all
+
+# Include target in all.
+all: src/Test/Regelung/IMU/CMakeFiles/IMU.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/Test/Regelung/IMU/CMakeFiles/IMU.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 src/Test/Regelung/IMU/CMakeFiles/IMU.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 0
+.PHONY : src/Test/Regelung/IMU/CMakeFiles/IMU.dir/rule
+
+# Convenience name for target.
+IMU: src/Test/Regelung/IMU/CMakeFiles/IMU.dir/rule
+.PHONY : IMU
+
+# clean rule for target.
+src/Test/Regelung/IMU/CMakeFiles/IMU.dir/clean:
+	$(MAKE) -f src/Test/Regelung/IMU/CMakeFiles/IMU.dir/build.make src/Test/Regelung/IMU/CMakeFiles/IMU.dir/clean
+.PHONY : src/Test/Regelung/IMU/CMakeFiles/IMU.dir/clean
+
+# clean rule for target.
+clean: src/Test/Regelung/IMU/CMakeFiles/IMU.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory src/Test/Regelung/ZustBest
+
+# Convenience name for "all" pass in the directory.
+src/Test/Regelung/ZustBest/all: src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/all
+.PHONY : src/Test/Regelung/ZustBest/all
+
+# Convenience name for "clean" pass in the directory.
+src/Test/Regelung/ZustBest/clean: src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/clean
+.PHONY : src/Test/Regelung/ZustBest/clean
+
+# Convenience name for "preinstall" pass in the directory.
+src/Test/Regelung/ZustBest/preinstall:
+.PHONY : src/Test/Regelung/ZustBest/preinstall
+
+#=============================================================================
+# Target rules for target src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir
+
+# All Build rule for target.
+src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/all:
+	$(MAKE) -f src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/build.make src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/depend
+	$(MAKE) -f src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/build.make src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  30 31 32 33 34 35 36 37
+	@echo "Built target Zustand"
+.PHONY : src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/all
+
+# Include target in all.
+all: src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 0
+.PHONY : src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/rule
+
+# Convenience name for target.
+Zustand: src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/rule
+.PHONY : Zustand
+
+# clean rule for target.
+src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/clean:
+	$(MAKE) -f src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/build.make src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/clean
+.PHONY : src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/clean
+
+# clean rule for target.
+clean: src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -297,14 +617,12 @@ clean: src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/clean
 test/all: test/CMakeFiles/dacMot.dir/all
 test/all: test/CMakeFiles/digIO.dir/all
 test/all: test/CMakeFiles/fqdMot.dir/all
-test/all: test/CMakeFiles/imu.dir/all
 .PHONY : test/all
 
 # Convenience name for "clean" pass in the directory.
 test/clean: test/CMakeFiles/dacMot.dir/clean
 test/clean: test/CMakeFiles/digIO.dir/clean
 test/clean: test/CMakeFiles/fqdMot.dir/clean
-test/clean: test/CMakeFiles/imu.dir/clean
 .PHONY : test/clean
 
 # Convenience name for "preinstall" pass in the directory.
@@ -318,7 +636,7 @@ test/preinstall:
 test/CMakeFiles/dacMot.dir/all:
 	$(MAKE) -f test/CMakeFiles/dacMot.dir/build.make test/CMakeFiles/dacMot.dir/depend
 	$(MAKE) -f test/CMakeFiles/dacMot.dir/build.make test/CMakeFiles/dacMot.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  7
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  38
 	@echo "Built target dacMot"
 .PHONY : test/CMakeFiles/dacMot.dir/all
 
@@ -353,7 +671,7 @@ clean: test/CMakeFiles/dacMot.dir/clean
 test/CMakeFiles/digIO.dir/all:
 	$(MAKE) -f test/CMakeFiles/digIO.dir/build.make test/CMakeFiles/digIO.dir/depend
 	$(MAKE) -f test/CMakeFiles/digIO.dir/build.make test/CMakeFiles/digIO.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  8
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  39
 	@echo "Built target digIO"
 .PHONY : test/CMakeFiles/digIO.dir/all
 
@@ -388,7 +706,7 @@ clean: test/CMakeFiles/digIO.dir/clean
 test/CMakeFiles/fqdMot.dir/all:
 	$(MAKE) -f test/CMakeFiles/fqdMot.dir/build.make test/CMakeFiles/fqdMot.dir/depend
 	$(MAKE) -f test/CMakeFiles/fqdMot.dir/build.make test/CMakeFiles/fqdMot.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  10
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  41
 	@echo "Built target fqdMot"
 .PHONY : test/CMakeFiles/fqdMot.dir/all
 
@@ -414,41 +732,6 @@ test/CMakeFiles/fqdMot.dir/clean:
 
 # clean rule for target.
 clean: test/CMakeFiles/fqdMot.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/CMakeFiles/imu.dir
-
-# All Build rule for target.
-test/CMakeFiles/imu.dir/all: src/mpu9250/CMakeFiles/mpu9250.dir/all
-	$(MAKE) -f test/CMakeFiles/imu.dir/build.make test/CMakeFiles/imu.dir/depend
-	$(MAKE) -f test/CMakeFiles/imu.dir/build.make test/CMakeFiles/imu.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles  11
-	@echo "Built target imu"
-.PHONY : test/CMakeFiles/imu.dir/all
-
-# Include target in all.
-all: test/CMakeFiles/imu.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-test/CMakeFiles/imu.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 8
-	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/imu.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dejan/projects/einbein/build/CMakeFiles 0
-.PHONY : test/CMakeFiles/imu.dir/rule
-
-# Convenience name for target.
-imu: test/CMakeFiles/imu.dir/rule
-.PHONY : imu
-
-# clean rule for target.
-test/CMakeFiles/imu.dir/clean:
-	$(MAKE) -f test/CMakeFiles/imu.dir/build.make test/CMakeFiles/imu.dir/clean
-.PHONY : test/CMakeFiles/imu.dir/clean
-
-# clean rule for target.
-clean: test/CMakeFiles/imu.dir/clean
 .PHONY : clean
 
 #=============================================================================

@@ -118,78 +118,9 @@ src/mpu9250/CMakeFiles/mpu9250.dir/glue/linux_glue.c.o.provides: src/mpu9250/CMa
 
 src/mpu9250/CMakeFiles/mpu9250.dir/glue/linux_glue.c.o.provides.build: src/mpu9250/CMakeFiles/mpu9250.dir/glue/linux_glue.c.o
 
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.o: src/mpu9250/CMakeFiles/mpu9250.dir/flags.make
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.o: ../src/mpu9250/mpu9250/mpu9250.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.o"
-	cd /home/dejan/projects/einbein/build/src/mpu9250 && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.o   -c /home/dejan/projects/einbein/src/mpu9250/mpu9250/mpu9250.c
-
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.i"
-	cd /home/dejan/projects/einbein/build/src/mpu9250 && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -E /home/dejan/projects/einbein/src/mpu9250/mpu9250/mpu9250.c > CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.i
-
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.s"
-	cd /home/dejan/projects/einbein/build/src/mpu9250 && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -S /home/dejan/projects/einbein/src/mpu9250/mpu9250/mpu9250.c -o CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.s
-
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.o.requires:
-.PHONY : src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.o.requires
-
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.o.provides: src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.o.requires
-	$(MAKE) -f src/mpu9250/CMakeFiles/mpu9250.dir/build.make src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.o.provides.build
-.PHONY : src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.o.provides
-
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.o.provides.build: src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.o
-
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.o: src/mpu9250/CMakeFiles/mpu9250.dir/flags.make
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.o: ../src/mpu9250/mpu9250/quaternion.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.o"
-	cd /home/dejan/projects/einbein/build/src/mpu9250 && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.o   -c /home/dejan/projects/einbein/src/mpu9250/mpu9250/quaternion.c
-
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.i"
-	cd /home/dejan/projects/einbein/build/src/mpu9250 && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -E /home/dejan/projects/einbein/src/mpu9250/mpu9250/quaternion.c > CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.i
-
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.s"
-	cd /home/dejan/projects/einbein/build/src/mpu9250 && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -S /home/dejan/projects/einbein/src/mpu9250/mpu9250/quaternion.c -o CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.s
-
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.o.requires:
-.PHONY : src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.o.requires
-
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.o.provides: src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.o.requires
-	$(MAKE) -f src/mpu9250/CMakeFiles/mpu9250.dir/build.make src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.o.provides.build
-.PHONY : src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.o.provides
-
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.o.provides.build: src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.o
-
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.o: src/mpu9250/CMakeFiles/mpu9250.dir/flags.make
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.o: ../src/mpu9250/mpu9250/vector3d.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.o"
-	cd /home/dejan/projects/einbein/build/src/mpu9250 && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.o   -c /home/dejan/projects/einbein/src/mpu9250/mpu9250/vector3d.c
-
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.i"
-	cd /home/dejan/projects/einbein/build/src/mpu9250 && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -E /home/dejan/projects/einbein/src/mpu9250/mpu9250/vector3d.c > CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.i
-
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.s"
-	cd /home/dejan/projects/einbein/build/src/mpu9250 && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -S /home/dejan/projects/einbein/src/mpu9250/mpu9250/vector3d.c -o CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.s
-
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.o.requires:
-.PHONY : src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.o.requires
-
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.o.provides: src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.o.requires
-	$(MAKE) -f src/mpu9250/CMakeFiles/mpu9250.dir/build.make src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.o.provides.build
-.PHONY : src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.o.provides
-
-src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.o.provides.build: src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.o
-
 src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/MahonyAHRS.c.o: src/mpu9250/CMakeFiles/mpu9250.dir/flags.make
 src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/MahonyAHRS.c.o: ../src/mpu9250/mpu9250/MahonyAHRS.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dejan/projects/einbein/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/MahonyAHRS.c.o"
 	cd /home/dejan/projects/einbein/build/src/mpu9250 && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/mpu9250.dir/mpu9250/MahonyAHRS.c.o   -c /home/dejan/projects/einbein/src/mpu9250/mpu9250/MahonyAHRS.c
 
@@ -215,9 +146,6 @@ mpu9250_OBJECTS = \
 "CMakeFiles/mpu9250.dir/eMPL/inv_mpu.c.o" \
 "CMakeFiles/mpu9250.dir/eMPL/inv_mpu_dmp_motion_driver.c.o" \
 "CMakeFiles/mpu9250.dir/glue/linux_glue.c.o" \
-"CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.o" \
-"CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.o" \
-"CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.o" \
 "CMakeFiles/mpu9250.dir/mpu9250/MahonyAHRS.c.o"
 
 # External object files for target mpu9250
@@ -226,9 +154,6 @@ mpu9250_EXTERNAL_OBJECTS =
 src/mpu9250/libmpu9250.a: src/mpu9250/CMakeFiles/mpu9250.dir/eMPL/inv_mpu.c.o
 src/mpu9250/libmpu9250.a: src/mpu9250/CMakeFiles/mpu9250.dir/eMPL/inv_mpu_dmp_motion_driver.c.o
 src/mpu9250/libmpu9250.a: src/mpu9250/CMakeFiles/mpu9250.dir/glue/linux_glue.c.o
-src/mpu9250/libmpu9250.a: src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.o
-src/mpu9250/libmpu9250.a: src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.o
-src/mpu9250/libmpu9250.a: src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.o
 src/mpu9250/libmpu9250.a: src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/MahonyAHRS.c.o
 src/mpu9250/libmpu9250.a: src/mpu9250/CMakeFiles/mpu9250.dir/build.make
 src/mpu9250/libmpu9250.a: src/mpu9250/CMakeFiles/mpu9250.dir/link.txt
@@ -243,9 +168,6 @@ src/mpu9250/CMakeFiles/mpu9250.dir/build: src/mpu9250/libmpu9250.a
 src/mpu9250/CMakeFiles/mpu9250.dir/requires: src/mpu9250/CMakeFiles/mpu9250.dir/eMPL/inv_mpu.c.o.requires
 src/mpu9250/CMakeFiles/mpu9250.dir/requires: src/mpu9250/CMakeFiles/mpu9250.dir/eMPL/inv_mpu_dmp_motion_driver.c.o.requires
 src/mpu9250/CMakeFiles/mpu9250.dir/requires: src/mpu9250/CMakeFiles/mpu9250.dir/glue/linux_glue.c.o.requires
-src/mpu9250/CMakeFiles/mpu9250.dir/requires: src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/mpu9250.c.o.requires
-src/mpu9250/CMakeFiles/mpu9250.dir/requires: src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/quaternion.c.o.requires
-src/mpu9250/CMakeFiles/mpu9250.dir/requires: src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/vector3d.c.o.requires
 src/mpu9250/CMakeFiles/mpu9250.dir/requires: src/mpu9250/CMakeFiles/mpu9250.dir/mpu9250/MahonyAHRS.c.o.requires
 .PHONY : src/mpu9250/CMakeFiles/mpu9250.dir/requires
 

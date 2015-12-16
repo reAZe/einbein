@@ -11,7 +11,7 @@
 
 
 #define DEFAULT_I2C_BUS 	2
-#define DEFAULT_SAMPLE_RATE_HZ	50
+#define DEFAULT_SAMPLE_RATE_HZ	100
 #define	DEGREE_TO_RAD		((float)M_PI / 180.0f)
 #define	RAD_TO_DEGREE		(180.0f / (float)M_PI)
 #define VEC3_X			0
@@ -24,7 +24,7 @@
 #define RAWACCEL		0x3B
 #define RAWGYRO			0x43
 #define IMUADDR			0x69
-#define ACCSENS  		(32768/8)
+#define ACCSENS  		(32768/16)
 #define GYROSENS 		(32768/2000)
 #define OFFSETGYRO_X		(37)
 #define OFFSETGYRO_Y		(-13)

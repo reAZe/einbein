@@ -3,6 +3,7 @@
 #define GPIO_MOT_ENC	7
 #define GPIO_SWITCH_LED 6
 #define GPIO_MOT 	8
+#define GPIO_FPGA_IO	5
 #define DAC_MOT		2
 
 

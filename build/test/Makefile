@@ -140,20 +140,6 @@ fqdMot/fast:
 	cd /home/dejan/projects/einbein/build && $(MAKE) -f test/CMakeFiles/fqdMot.dir/build.make test/CMakeFiles/fqdMot.dir/build
 .PHONY : fqdMot/fast
 
-# Convenience name for target.
-test/CMakeFiles/imu.dir/rule:
-	cd /home/dejan/projects/einbein/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/imu.dir/rule
-.PHONY : test/CMakeFiles/imu.dir/rule
-
-# Convenience name for target.
-imu: test/CMakeFiles/imu.dir/rule
-.PHONY : imu
-
-# fast build rule for target.
-imu/fast:
-	cd /home/dejan/projects/einbein/build && $(MAKE) -f test/CMakeFiles/imu.dir/build.make test/CMakeFiles/imu.dir/build
-.PHONY : imu/fast
-
 dacMot.o: dacMot.cpp.o
 .PHONY : dacMot.o
 
@@ -226,30 +212,6 @@ fqdMot.cpp.s:
 	cd /home/dejan/projects/einbein/build && $(MAKE) -f test/CMakeFiles/fqdMot.dir/build.make test/CMakeFiles/fqdMot.dir/fqdMot.cpp.s
 .PHONY : fqdMot.cpp.s
 
-imu.o: imu.cpp.o
-.PHONY : imu.o
-
-# target to build an object file
-imu.cpp.o:
-	cd /home/dejan/projects/einbein/build && $(MAKE) -f test/CMakeFiles/imu.dir/build.make test/CMakeFiles/imu.dir/imu.cpp.o
-.PHONY : imu.cpp.o
-
-imu.i: imu.cpp.i
-.PHONY : imu.i
-
-# target to preprocess a source file
-imu.cpp.i:
-	cd /home/dejan/projects/einbein/build && $(MAKE) -f test/CMakeFiles/imu.dir/build.make test/CMakeFiles/imu.dir/imu.cpp.i
-.PHONY : imu.cpp.i
-
-imu.s: imu.cpp.s
-.PHONY : imu.s
-
-# target to generate assembly for a file
-imu.cpp.s:
-	cd /home/dejan/projects/einbein/build && $(MAKE) -f test/CMakeFiles/imu.dir/build.make test/CMakeFiles/imu.dir/imu.cpp.s
-.PHONY : imu.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -260,7 +222,6 @@ help:
 	@echo "... digIO"
 	@echo "... edit_cache"
 	@echo "... fqdMot"
-	@echo "... imu"
 	@echo "... rebuild_cache"
 	@echo "... dacMot.o"
 	@echo "... dacMot.i"
@@ -271,9 +232,6 @@ help:
 	@echo "... fqdMot.o"
 	@echo "... fqdMot.i"
 	@echo "... fqdMot.s"
-	@echo "... imu.o"
-	@echo "... imu.i"
-	@echo "... imu.s"
 .PHONY : help
 
 

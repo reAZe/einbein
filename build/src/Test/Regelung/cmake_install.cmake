@@ -35,7 +35,13 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   INCLUDE("/home/dejan/projects/einbein/build/src/Test/Regelung/Trajektorie/cmake_install.cmake")
-  INCLUDE("/home/dejan/projects/einbein/build/src/Test/Regelung/Fusspunkt/cmake_install.cmake")
+  INCLUDE("/home/dejan/projects/einbein/build/src/Test/Regelung/Base2Tool/cmake_install.cmake")
+  INCLUDE("/home/dejan/projects/einbein/build/src/Test/Regelung/Controller/cmake_install.cmake")
+  INCLUDE("/home/dejan/projects/einbein/build/src/Test/Regelung/PDV/cmake_install.cmake")
+  INCLUDE("/home/dejan/projects/einbein/build/src/Test/Regelung/Encoder/cmake_install.cmake")
+  INCLUDE("/home/dejan/projects/einbein/build/src/Test/Regelung/PMotor/cmake_install.cmake")
+  INCLUDE("/home/dejan/projects/einbein/build/src/Test/Regelung/IMU/cmake_install.cmake")
+  INCLUDE("/home/dejan/projects/einbein/build/src/Test/Regelung/ZustBest/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

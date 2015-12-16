@@ -125,6 +125,19 @@ mpu9250/fast:
 .PHONY : mpu9250/fast
 
 #=============================================================================
+# Target rules for targets named Controll
+
+# Build rule for target.
+Controll: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Controll
+.PHONY : Controll
+
+# fast build rule for target.
+Controll/fast:
+	$(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/build
+.PHONY : Controll/fast
+
+#=============================================================================
 # Target rules for targets named Trajektorie
 
 # Build rule for target.
@@ -147,8 +160,73 @@ Fusspunkt: cmake_check_build_system
 
 # fast build rule for target.
 Fusspunkt/fast:
-	$(MAKE) -f src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/build.make src/Test/Regelung/Fusspunkt/CMakeFiles/Fusspunkt.dir/build
+	$(MAKE) -f src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/build.make src/Test/Regelung/Base2Tool/CMakeFiles/Fusspunkt.dir/build
 .PHONY : Fusspunkt/fast
+
+#=============================================================================
+# Target rules for targets named Controller
+
+# Build rule for target.
+Controller: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Controller
+.PHONY : Controller
+
+# fast build rule for target.
+Controller/fast:
+	$(MAKE) -f src/Test/Regelung/Controller/CMakeFiles/Controller.dir/build.make src/Test/Regelung/Controller/CMakeFiles/Controller.dir/build
+.PHONY : Controller/fast
+
+#=============================================================================
+# Target rules for targets named PDV
+
+# Build rule for target.
+PDV: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PDV
+.PHONY : PDV
+
+# fast build rule for target.
+PDV/fast:
+	$(MAKE) -f src/Test/Regelung/PDV/CMakeFiles/PDV.dir/build.make src/Test/Regelung/PDV/CMakeFiles/PDV.dir/build
+.PHONY : PDV/fast
+
+#=============================================================================
+# Target rules for targets named Encoder
+
+# Build rule for target.
+Encoder: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Encoder
+.PHONY : Encoder
+
+# fast build rule for target.
+Encoder/fast:
+	$(MAKE) -f src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/build.make src/Test/Regelung/Encoder/CMakeFiles/Encoder.dir/build
+.PHONY : Encoder/fast
+
+#=============================================================================
+# Target rules for targets named IMU
+
+# Build rule for target.
+IMU: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 IMU
+.PHONY : IMU
+
+# fast build rule for target.
+IMU/fast:
+	$(MAKE) -f src/Test/Regelung/IMU/CMakeFiles/IMU.dir/build.make src/Test/Regelung/IMU/CMakeFiles/IMU.dir/build
+.PHONY : IMU/fast
+
+#=============================================================================
+# Target rules for targets named Zustand
+
+# Build rule for target.
+Zustand: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Zustand
+.PHONY : Zustand
+
+# fast build rule for target.
+Zustand/fast:
+	$(MAKE) -f src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/build.make src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/build
+.PHONY : Zustand/fast
 
 #=============================================================================
 # Target rules for targets named dacMot
@@ -189,19 +267,6 @@ fqdMot/fast:
 	$(MAKE) -f test/CMakeFiles/fqdMot.dir/build.make test/CMakeFiles/fqdMot.dir/build
 .PHONY : fqdMot/fast
 
-#=============================================================================
-# Target rules for targets named imu
-
-# Build rule for target.
-imu: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 imu
-.PHONY : imu
-
-# fast build rule for target.
-imu/fast:
-	$(MAKE) -f test/CMakeFiles/imu.dir/build.make test/CMakeFiles/imu.dir/build
-.PHONY : imu/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,12 +277,17 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... einbein"
 	@echo "... mpu9250"
+	@echo "... Controll"
 	@echo "... Trajektorie"
 	@echo "... Fusspunkt"
+	@echo "... Controller"
+	@echo "... PDV"
+	@echo "... Encoder"
+	@echo "... IMU"
+	@echo "... Zustand"
 	@echo "... dacMot"
 	@echo "... digIO"
 	@echo "... fqdMot"
-	@echo "... imu"
 .PHONY : help
 
 

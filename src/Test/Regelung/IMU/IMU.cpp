@@ -80,45 +80,6 @@ void IMU::run(){
   
   angularvelocity(angleIMU,dangleIMU);
 
-//   quaternion(QUAT_W) = 0.9865;
-//   quaternion(QUAT_X) = -0.1169;
-//   quaternion(QUAT_Y) = 0.0076;
-//   quaternion(QUAT_Z) = 0.0987;
-//   accel(VEC3_X)=-0.0342;
-//   accel(VEC3_Y)=-0.2251;
-//   accel(VEC3_Z)=0.9473; 
-//   ddxIMU_1 = Matrix<3,1,double>({0.0012,-0.0010,-0.0232});
-//   dxIMU_1 = Matrix<3,1,double>({-0.2857,-0.2045,-0.7027});
-//   xIMU_1 = Matrix<3,1,double>({-0.7829,-1.3801,-4.8804});
-//   angleIMU_1 = Matrix<3,1,double>({-0.2262,0.0354,0.1947});
-//   quaternionToEuler(quaternion,angleIMU);
-//   quaternionToRotMatr(quaternion,rotMatr);
-//   accelCompensation(rotMatr,accel,ddxIMU);  
-//   positionVelocity(ddxIMU,dxIMU,xIMU);
-//   angularvelocity(angleIMU,dangleIMU);
-//   std::cout << "ang: 	" << angleIMU << std::endl;
-//   std::cout << "angVel:	" << dangleIMU << std::endl;
-//   std::cout << "acc:	" << ddxIMU << std::endl;
-//   std::cout << "vel:	" << dxIMU << std::endl;
-//   std::cout << "pos:	" << xIMU << std::endl;
-//     
-//   quaternion(QUAT_W) = 0.9862;
-//   quaternion(QUAT_X) = -0.1191;
-//   quaternion(QUAT_Y) = 0.0083;
-//   quaternion(QUAT_Z) = 0.0986;
-//   accel(VEC3_X)=-0.0264;
-//   accel(VEC3_Y)=-0.2251;
-//   accel(VEC3_Z)=0.9819; 
-//   quaternionToEuler(quaternion,angleIMU);
-//   quaternionToRotMatr(quaternion,rotMatr);
-//   accelCompensation(rotMatr,accel,ddxIMU);
-//   positionVelocity(ddxIMU,dxIMU,xIMU);
-//   angularvelocity(angleIMU,dangleIMU);
-//   std::cout << "ang: 	" << angleIMU << std::endl;
-//   std::cout << "angVel:	" << dangleIMU << std::endl;
-//   std::cout << "acc:	" << ddxIMU << std::endl;
-//   std::cout << "vel:	" << dxIMU << std::endl;
-//   std::cout << "pos:	" << xIMU << std::endl;
   
   //Offset
   ddxIMU(0) = ddxIMU(0) + 0.008524181122449;

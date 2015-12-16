@@ -44,15 +44,14 @@ namespace einbein{
   private:
     virtual void run();
     
-    //input
-    double ddzIMU, dzIMU;
+    double ddzIMU, dzIMU, ddzIMU_1, dzIMU_1, dz_dif;
     Vector3 enc, denc;
     
-    //output
     unsigned short Zustand;
     
     double Ts; 
     Vector3 enc_dif, enc_1;
+
     
     
   };// end class ZustBest
