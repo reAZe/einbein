@@ -19,7 +19,7 @@ namespace einbein{
   class PDV : public eeros::control::Block{
     
     public:
-	      PDV(double kp_Vk, double kv_Vk, double m_Vk, double Ts);
+	      PDV(double Kp, double Kd, double M, double ts);
 	      virtual ~PDV();
 	     
 	      //define inputs
@@ -28,7 +28,12 @@ namespace einbein{
 	      
 	      //define outputs
 	      virtual eeros::control::Output<double>& getOut_F_0(){return out_F_0;}
-      
+	      virtual eeros::control::Output<double>& getOut_d_xSoll_0(){return out_d_xSoll_0;}
+	      virtual eeros::control::Output<double>& getOut_dd_xSoll_0(){return out_dd_xSoll_0;}
+	      virtual eeros::control::Output<double>& getOut_d_xIst_0(){return out_d_xIst_0;}
+	      
+	      
+	      
 	    
     protected: 
 	      //define inputs
@@ -37,6 +42,9 @@ namespace einbein{
       
 	      //define outputs
 	      eeros::control::Output<double> out_F_0;
+	      eeros::control::Output<double> out_d_xSoll_0;
+	      eeros::control::Output<double> out_dd_xSoll_0;
+	      eeros::control::Output<double> out_d_xIst_0;
 
 	      
     private:  
@@ -47,9 +55,11 @@ namespace einbein{
 	      double xSoll_0, xIst_0;
 	      
 	      //intern
-	      double d_xSoll_0, dd_xSoll_0, d_xIst_0;
-	      double xSoll_0_1, d_xSoll_0_1, xIst_0_1;
-	      double error_Kp, d_x, dd_x;
+	      double kp, kd, m, kp_, kd_, Tv, Tb;
+	      double y, y_1, e, e_1;
+	      
+	      double dxIst, xIst_1, xMax, s, vMax, aMax, vSoll, KP;
+	      
 	      
 	      //output
 	      double F_0;
