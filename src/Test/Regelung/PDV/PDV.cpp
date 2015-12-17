@@ -140,17 +140,13 @@ void PDV::run(){
     //-----------------------------  set Output ------------------------------------------ 
       out_F_0.getSignal().setValue(y);
 
-      
-      
       //set Timestamp
       out_F_0.getSignal().setTimestamp(in_xSoll_0.getSignal().getTimestamp());
 
 
-      
       //set Name
       out_F_0.getSignal().setName("Sollkratft im {0}  [m]");
 
-     
     
 }//end run
 

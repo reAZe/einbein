@@ -158,6 +158,9 @@ CSControll::CSControll(double ts) :
       mux_FRegler.getIn(0).connect(pDV_xf.getOut_F_0());
       mux_FRegler.getIn(1).connect(pDV_yf.getOut_F_0());
       mux_FRegler.getIn(2).connect(pDV_zf.getOut_F_0());      
+      //Demux Encoder
+      deMuxEncoder.getIn().connect(encoder.getOut_enc());
+      deMuxdEncoder.getIn().connect(encoder.getOut_d_enc());
       //vorwärtskimematik
       vorKinController.getIn_F_Fuss_vec().connect(mux_FRegler.getOut());
       vorKinController.getIn_alpha1().connect(alpha1.getOut());
@@ -189,6 +192,8 @@ CSControll::CSControll(double ts) :
       timedomain.addBlock(&deMux_vorKin);
       timedomain.addBlock(&T_sprung);
       timedomain.addBlock(&constInput_f);
+      timedomain.addBlock(&deMuxEncoder);
+      timedomain.addBlock(&deMuxdEncoder);
       timedomain.addBlock(&trajektorie_xf);
       timedomain.addBlock(&trajektorie_yf);
       timedomain.addBlock(&trajektorie_zf);

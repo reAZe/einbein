@@ -71,6 +71,7 @@ void Encoder::run(){
       d_enc2_read   = (enc2_read - enc2_read_1)/Ts;
       d_enc3_read   = (enc3_read - enc3_read_1)/Ts;
       
+
       //Werte Übergeben
       enc1_read_1   = enc1_read;
       enc2_read_1   = enc2_read;
@@ -103,7 +104,6 @@ void Encoder::run(){
       out_d_enc.getSignal().setName("d_enc1: d_enc2: d_enc3 [m/s]");
       
 }//end run
-
 
 
 

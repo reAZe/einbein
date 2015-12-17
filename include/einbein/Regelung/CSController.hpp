@@ -48,11 +48,13 @@ class CSControll{
   eeros::control::Constant<double> beta1;
   eeros::control::Constant<double> gamma1;
   eeros::control::Constant<double> T_sprung;
-  eeros::control::DeMux<3, double>deMux_xSoll;
+  eeros::control::DeMux<3, double> deMux_xSoll;
   eeros::control::DeMux<3, double> deMux_Pf0;
   eeros::control::DeMux<3, double> deMux_vorKin;
   eeros::control::DeMux<3, double> deMux_Saturation;
   eeros::control::DeMux<3, double> deMuxConstInput;
+  eeros::control::DeMux<3, double> deMuxdEncoder;
+  eeros::control::DeMux<3, double> deMuxEncoder;
   eeros::control::Mux<3, double> mux_FRegler;
  
   
