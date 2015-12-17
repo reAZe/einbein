@@ -22,7 +22,7 @@ CSControll::CSControll(double ts) :
     vorKinController(),
     trajektorie_xf(ts), trajektorie_yf(ts), trajektorie_zf(ts),
     deMux_Pf0(), deMux_xSoll(), deMuxConstInput(), deMux_Saturation(),
-    pDV_xf(0.222*98696.0, 0.05*454.0, 0.05, ts), pDV_yf(0.222*98696.0, 0.055*454.0, 0.05, ts), pDV_zf(0.222*98696.0, 0.05*454.0, 0.05, ts),
+    pDV_xf(0.222*98696.0, 0.055*454.0, 0.05, ts), pDV_yf(0.222*98696.0, 0.055*454.0, 0.05, ts), pDV_zf(0.222*98696.0, 0.05*454.0, 0.05, ts),
     //    pDV_xf(224.0, 440.0*0.5, 0.05, ts), pDV_yf(224.0, 440.0*0.5, 0.05, ts), pDV_zf(224.0, 440.0*0.5, 0.05, ts),
     //    pDV_xf(45.0, 88.0, 0.05, ts), pDV_yf(45.0, 88.0, 0.05, ts), pDV_zf(224.0, 440.0, 0.05, ts),
     mux_FRegler(),

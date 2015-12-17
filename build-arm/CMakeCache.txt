@@ -15,10 +15,10 @@
 ########################
 
 //No help, variable specified on the command line.
-ADDITIONAL_INCLUDE_DIRS:UNINITIALIZED=/home/dejan/eeros-framework/includes /home/dejan/flinklib/include
+ADDITIONAL_INCLUDE_DIRS:UNINITIALIZED=/home/reto/flinklib/include
 
 //No help, variable specified on the command line.
-ADDITIONAL_LINK_DIRS:UNINITIALIZED=/home/reto/eeros-framework/build-arm/src/libeeros.so /home/reto/flinklib/build-arm/lib/libflink.so
+ADDITIONAL_LINK_DIRS:UNINITIALIZED=/home/reto/flinklib/build-arm/lib
 
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/arm-linux-gnueabihf-ar
@@ -174,7 +174,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_STRIP:FILEPATH=/usr/bin/arm-linux-gnueabihf-strip
 
 //No help, variable specified on the command line.
-CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=/home/reto/arm-toolchain.cmake
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=
 
 //If true, cmake will use relative paths in makefiles and projects.
 CMAKE_USE_RELATIVE_PATHS:BOOL=OFF

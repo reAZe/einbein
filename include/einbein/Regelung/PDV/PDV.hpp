@@ -28,11 +28,7 @@ namespace einbein{
 	      
 	      //define outputs
 	      virtual eeros::control::Output<double>& getOut_F_0(){return out_F_0;}
-	      virtual eeros::control::Output<double>& getOut_d_xSoll_0(){return out_d_xSoll_0;}
-	      virtual eeros::control::Output<double>& getOut_dd_xSoll_0(){return out_dd_xSoll_0;}
-	      virtual eeros::control::Output<double>& getOut_d_xIst_0(){return out_d_xIst_0;}
-	      
-	      
+	    	      
 	      
 	    
     protected: 
@@ -42,9 +38,7 @@ namespace einbein{
       
 	      //define outputs
 	      eeros::control::Output<double> out_F_0;
-	      eeros::control::Output<double> out_d_xSoll_0;
-	      eeros::control::Output<double> out_dd_xSoll_0;
-	      eeros::control::Output<double> out_d_xIst_0;
+
 
 	      
     private:  
@@ -58,8 +52,11 @@ namespace einbein{
 	      double kp, kd, m, kp_, kd_, Tv, Tb;
 	      double y, y_1, e, e_1;
 	      
-	      double dxIst, xIst_1, xMax, s, vMax, aMax, vSoll, KP;
+	      double dxIst, xIst_1, xMaxPositiv, s, vMax, aMax, vSoll, KP;
 	      
+	      double dxIstFilter, dxIst_1, dxIst_2, dxIst_3, dxIst_4, dxIst_5, dxIst_6, dxIst_7, dxIst_8; 
+	      double a0, a1, a2, a3, a4, a5, a6, a7, a8;
+	      double dxSoll, xSoll_1;
 	      
 	      //output
 	      double F_0;

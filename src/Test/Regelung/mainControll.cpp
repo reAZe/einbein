@@ -186,19 +186,21 @@ int main() {
 		//Ausgabe Regelgrösse [xf_ist, yf_ist, zf_ist, , xf_soll, yf_soll, zf_soll, FxSoll, FySoll, FzSoll,
 		//		      M1_Saturation, M2_Saturation, M3_Saturation, FM1, FM2, FM3, d_istX, d_distY, d_distZ
 		//			xSollTraje, ySollTraje, zSollTraje]
-		printf("%f;  %f; %f;  %f;  %f;  %f;  %f;  %f;  %f; %f; %f; %f; %f; %f; %f; %f; %f; %f; %f; %f; %f\n", 
+		printf("%f;  %f;  %f;  %f;  %f;  %f; %f; %f; %f; %f; %f; %f; %f; %f; %f; %f; %f; %f\n", 
 			cSControll.deMux_Pf0.getOut(0).getSignal().getValue(), cSControll.deMux_Pf0.getOut(1).getSignal().getValue(), cSControll.deMux_Pf0.getOut(2).getSignal().getValue(),
 			cSControll.deMux_xSoll.getOut(0).getSignal().getValue(), cSControll.deMux_xSoll.getOut(1).getSignal().getValue(), cSControll.deMux_xSoll.getOut(2).getSignal().getValue(), 
 			cSControll.pDV_xf.getOut_F_0().getSignal().getValue(), cSControll.pDV_yf.getOut_F_0().getSignal().getValue(), cSControll.pDV_zf.getOut_F_0().getSignal().getValue(),
 			cSControll.deMux_Saturation.getOut(0).getSignal().getValue(), cSControll.deMux_Saturation.getOut(1).getSignal().getValue(), cSControll.deMux_Saturation.getOut(2).getSignal().getValue(),
 			cSControll.deMux_vorKin.getOut(0).getSignal().getValue(), cSControll.deMux_vorKin.getOut(1).getSignal().getValue(), cSControll.deMux_vorKin.getOut(2).getSignal().getValue(),
-			cSControll.pDV_xf.getOut_d_xIst_0().getSignal().getValue(), cSControll.pDV_yf.getOut_d_xIst_0().getSignal().getValue(), cSControll.pDV_zf.getOut_d_xIst_0().getSignal().getValue(),
 			cSControll.trajektorie_xf.getOut_x_d().getSignal().getValue(), cSControll.trajektorie_yf.getOut_x_d().getSignal().getValue(), cSControll.trajektorie_zf.getOut_x_d().getSignal().getValue()
-		  
-			
-		);
+		  	);
+
+	    
+// 		//Ausgabe Fussposition [xf_ist, yf_ist, zf_ist]
+// 		printf("%f; %f; %f; \n", 
+// 		  cSControll.deMux_Pf0.getOut(0).getSignal().getValue(), cSControll.deMux_Pf0.getOut(1).getSignal().getValue(), cSControll.deMux_Pf0.getOut(2).getSignal().getValue()
+// 		);
 // 		
-		
 
 		
 		
@@ -259,7 +261,7 @@ int main() {
 
 		
 		sleep(1);
-		//usleep(100000);
+		//usleep(10000);
 	}
 	
 	
