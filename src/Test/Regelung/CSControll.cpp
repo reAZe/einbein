@@ -64,23 +64,31 @@ CSControll::CSControll(double ts) :
     
 
 //Anschlagsregelung
-/*    F_Soll.setValue({0,0,0}); //M1R M2R M3R
+   F_Soll.setValue({0,0,0}); //M1R M2R M3R
+   deMuxEncoder.getIn().connect(encoder.getOut_enc());
+   deMuxdEncoder.getIn().connect(encoder.getOut_d_enc());
    pMotor.getIn_FSoll().connect(F_Soll.getOut());
    pMotor.getIn_enc().connect(encoder.getOut_enc());
    pMotor.getIn_d_enc().connect(encoder.getOut_d_enc());
+   deMux_pMotor.getIn().connect(pMotor.getOut_FSollMot());
    motorModell.getIn_FM_Soll().connect(pMotor.getOut_FSollMot());
    saturation.getIn().connect(motorModell.getOut_IM_Soll());
-   
+   deMux_Saturation.getIn().connect(saturation.getOut());
    i2DAC.getIn_Voltage().connect(saturation.getOut()); 
    
    
    timedomain.addBlock(&encoder);
    timedomain.addBlock(&F_Soll);
+   timedomain.addBlock(&deMuxEncoder);
+   timedomain.addBlock(&deMuxdEncoder);
    timedomain.addBlock(&pMotor);
+   timedomain.addBlock(&deMux_pMotor);
    timedomain.addBlock(&motorModell);
    timedomain.addBlock(&saturation);
-   timedomain.addBlock(&i2DAC);*/
-      
+   timedomain.addBlock(&deMux_Saturation);
+   timedomain.addBlock(&i2DAC);
+
+	
       
 //Vorwärtkinematik mit Kraft   
 /*      F_Soll.setValue({0.0,0,0}); //x,y,z
@@ -122,7 +130,7 @@ CSControll::CSControll(double ts) :
 
 
 //Vorwärtskinemtaik mit Trajektiorenregelung
-
+/*
       x_Soll.setValue({0.0, 0.0, -0.6}); //x,y,z
       alpha1.setValue(0.0);
       beta1.setValue(0.0);
@@ -211,7 +219,7 @@ CSControll::CSControll(double ts) :
       timedomain.addBlock(&motorModell);
       timedomain.addBlock(&saturation);
       timedomain.addBlock(&deMux_Saturation);
-      timedomain.addBlock(&i2DAC);
+      timedomain.addBlock(&i2DAC);*/
 
 
     

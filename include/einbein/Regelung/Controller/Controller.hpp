@@ -27,7 +27,7 @@ namespace einbein{
 	      virtual eeros::control::Input<int>& getIn_Zustand(){return in_Zustand;}
 	      virtual eeros::control::Input<double>& getIn_Ts(){return in_Ts;}
 	      virtual eeros::control::Input<Matrix<11,1>>& getIn_VarZustand(){return in_VarZustand;}
-	      virtual eeros::control::Input<Matrix<14,1>>& getIn_DataImu(){return in_DataImu;}
+	      virtual eeros::control::Input<Matrix<15,1>>& getIn_DataImu(){return in_DataImu;}
 	  
 	      
 	      //define outputs
@@ -44,7 +44,7 @@ namespace einbein{
 	      eeros::control::Input<double> in_Ts;	
 	      eeros::control::Input<int> in_Zustand;	
 	      eeros::control::Input<Matrix<11,1>> in_VarZustand;	    
-	      eeros::control::Input<Matrix<14,1>> in_DataImu;	
+	      eeros::control::Input<Matrix<15,1>> in_DataImu;	
 	      
 	      
 	      //define outputs
@@ -60,7 +60,7 @@ namespace einbein{
 	      virtual void run();
 	      //input
 	      Matrix<11,1> VarZustand;
-	      Matrix<14,1> DataImu;
+	      Matrix<15,1> DataImu;
 	      double Ts;
 	      int Zustand;
 	      double rz_Platte_max, rx_Platte_Landung, vx_Platte_Absprung, ry_Platte_Landung;

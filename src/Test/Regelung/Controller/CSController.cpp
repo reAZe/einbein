@@ -40,8 +40,8 @@ CSController::CSController(double ts) :
 	
 //			/0	/1	/2	/3	/4	/5	/6
 //			/7	/8	/9	/10	/11	/12	/13    
-    Imu = Matrix<14,1>({0,	0,	0, 	2,	1,	0,	0,
-			0,	0,	-0.25, 	3,	0,	0,	0 });
+    Imu = Matrix<15,1>({0,	0,	0, 	2,	1,	0,	0,
+			0,	0,	-0.25, 	3,	0,	0,	0 , 	0});
 
     DataImu.setValue(Imu);	
     

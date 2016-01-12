@@ -55,6 +55,7 @@ class CSControll{
   eeros::control::DeMux<3, double> deMuxConstInput;
   eeros::control::DeMux<3, double> deMuxdEncoder;
   eeros::control::DeMux<3, double> deMuxEncoder;
+  eeros::control::DeMux<3, double> deMux_pMotor;
   eeros::control::Mux<3, double> mux_FRegler;
  
   

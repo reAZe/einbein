@@ -16,11 +16,11 @@ class CSController{
   void stop();
   void join();
   eeros::math::Matrix<11,1> var;
-  eeros::math::Matrix<14,1> Imu;
+  eeros::math::Matrix<15,1> Imu;
   eeros::control::Constant<int> Zustand; 
   eeros::control::Constant<double> Ts;
   eeros::control::Constant<Matrix<11,1>> VarZustand;
-  eeros::control::Constant<Matrix<14,1>> DataImu;
+  eeros::control::Constant<Matrix<15,1>> DataImu;
   
 
     

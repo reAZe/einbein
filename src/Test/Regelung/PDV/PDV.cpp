@@ -27,10 +27,10 @@ PDV::PDV(double Kp, double Kd, double M, double ts){
     Tb  = 0.1*Tv; 	//Nachstellzeit  
     
     //Wurzelregler
-    s = 0.005;
-    vMax = 1.5;
-    aMax = 30;
-    KP = 1.2;
+    s = 0.0005;
+    vMax = 0.5;
+    aMax = 15;
+    KP = 2.8;  
     
     //Ableitungen
     xSoll_1 = 0; xIst_1 = 0; dxIst = 0;
@@ -69,7 +69,8 @@ void PDV::run(){
       dxIst = (xIst_0-xIst_1)/Ts;
       dxIstFilter = a0*dxIst + a1*dxIst_1 + a2*dxIst_2 + a3*dxIst_3 + a4*dxIst_4 + a5*dxIst_5  + a6*dxIst_6  +  a7*dxIst_7  + a8*dxIst_8 ;
       //Grenzposition zwischen maximalen Geschwindigkeit und Wurzelfunktion
-      xMaxPositiv = xSoll_0 -s - (vMax*vMax)/(2*aMax);
+      xMaxPositiv = (vMax*vMax)/(2*aMax) + s;
+      xMaxNegativ = -(vMax*vMax)/(2*aMax) - s;
       
       //Wahl des Reglers
       if (fabs(e) <= 2*s){//um Nullpunkt 
@@ -88,37 +89,53 @@ void PDV::run(){
 	    }
 	else if(isnan(y)){
 	    y = 0;
-	    printf("NaN in PD.cpp");
+	    printf("NaN y in PD.cpp\n");
 	    }
 	else if(isinf(y)){
 	    y = 0;
-	    printf("inf in PD.cpp");
+	    printf("inf y in PD.cpp\n");
 	    }
       }//end if abs(e)<2s
 
+
+     else if (e < xMaxNegativ){//Maximale negative Geschwindigkeit
+	vSoll = -vMax;
+	y = KP *(vSoll- dxIstFilter);
+	//printf("Wurzel max/n");
+      }//end Maximale Geschwindigkeit
+  
+  
+     else if (e > xMaxPositiv){//Maximale positive Geschwindigkeit
+	vSoll = vMax;
+	y = KP *(vSoll- dxIstFilter);
+	//printf("Wurzel max/n");
+      }//end Maximale Geschwindigkeit
+ 
+ 
+     else if ((xMaxNegativ < e) && (e < -2*s)){//Wurzelfunktion negativ
+	vSoll = -sqrt(fabs(2*aMax*(e+s)));
+	y = KP *(vSoll- dxIstFilter);
+	//printf("Wurzel neg/n");
+      }//end Wurzelfunktion negativ 
       
-      else if((e > 2*s) && (e < xMaxPositiv)){//Wurzelfunktion positiv
-	vSoll = sqrt(2*aMax*fabs(e)-s);
+      
+      else if((2*s < e) && (e < xMaxPositiv)){//Wurzelfunktion positiv
+	vSoll = sqrt(2*aMax*(e-s));
+	  if(isnan(vSoll)){"NaN vsoll in PDV.cpp\n"; }
 	y = KP *(vSoll- dxIstFilter);
 	//printf("Wurzel positiv/n");
       }//end Wurzelfunktion positiv
       
-      else if ((e < -2*s) && (e > -xMaxPositiv)){//Wurzelfunktion negativ
-	vSoll = -sqrt(2*aMax*fabs(e)+s);
-	y = KP *(vSoll- dxIstFilter);
-	//printf("Wurzel neg/n");
-      }//end Wurzelfunktion negativ
-      
-      else if (fabs(e) > xMaxPositiv){//Maximale Geschwindigkeit
-	vSoll = signum(e)*vMax;
-	y = KP *(vSoll- dxIstFilter);
-	//printf("Wurzel max/n");
-      }//end Maximale Geschwindigkeit
-      
+     
+     
       else{ y = 0;
 	  printf("nothing to do in pdv.cpp/n");
       }
       
+      
+      
+      
+    
   
       y_1 = y;
       e_1 = e;

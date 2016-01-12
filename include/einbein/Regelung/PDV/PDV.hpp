@@ -52,7 +52,7 @@ namespace einbein{
 	      double kp, kd, m, kp_, kd_, Tv, Tb;
 	      double y, y_1, e, e_1;
 	      
-	      double dxIst, xIst_1, xMaxPositiv, s, vMax, aMax, vSoll, KP;
+	      double dxIst, xIst_1, xMaxPositiv, xMaxNegativ, s, vMax, aMax, vSoll, KP;
 	      
 	      double dxIstFilter, dxIst_1, dxIst_2, dxIst_3, dxIst_4, dxIst_5, dxIst_6, dxIst_7, dxIst_8; 
 	      double a0, a1, a2, a3, a4, a5, a6, a7, a8;
