@@ -57,7 +57,13 @@ namespace einbein{
 	      double d_enc1_read, d_enc2_read, d_enc3_read;
 	      double Ts; 
 	      double enc1_read_1, enc2_read_1, enc3_read_1;
-	      Vector3 enc, d_enc;; 
+	      Vector3 enc, d_enc, d_enc_Filter;
+	      
+	      
+	      //Filter 
+	      Vector3 d_enc_1, d_enc_2, d_enc_3, d_enc_4, d_enc_5, d_enc_6, d_enc_7, d_enc_8;
+	      double a0, a1, a2, a3, a4, a5, a6, a7, a8;
+	      
 	      
 
     

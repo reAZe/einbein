@@ -12,7 +12,7 @@ using namespace eeros::math;
 
 
 //Konstruktor
-PDV::PDV(double Kp, double Kd, double M, double ts){
+PDV::PDV(double Kp, double Kd, double M, double Kv, double ts){
     
     //PD-Regler
     kp = Kp;
@@ -27,10 +27,10 @@ PDV::PDV(double Kp, double Kd, double M, double ts){
     Tb  = 0.1*Tv; 	//Nachstellzeit  
     
     //Wurzelregler
-    s = 0.0005;
+    s = 0.00025;
     vMax = 0.5;
     aMax = 15;
-    KP = 2.8;  
+    KP = Kv; 		//Kp = 2.8 
     
     //Ableitungen
     xSoll_1 = 0; xIst_1 = 0; dxIst = 0;
@@ -71,7 +71,13 @@ void PDV::run(){
       //Grenzposition zwischen maximalen Geschwindigkeit und Wurzelfunktion
       xMaxPositiv = (vMax*vMax)/(2*aMax) + s;
       xMaxNegativ = -(vMax*vMax)/(2*aMax) - s;
+     
+  
       
+      
+      
+      
+     
       //Wahl des Reglers
       if (fabs(e) <= 2*s){//um Nullpunkt 
 	//PD-Regler mit Nachstellzeit
@@ -81,21 +87,22 @@ void PDV::run(){
 	y = m*(kp*e+kd*(dxSoll-dxIstFilter));
 	//y = 0;
 	//saturation
-	if(y > 100){
-	    y = 100;
-	    }
-	else if(y < -100){
-	    y = -100;
-	    }
-	else if(isnan(y)){
-	    y = 0;
-	    printf("NaN y in PD.cpp\n");
-	    }
-	else if(isinf(y)){
-	    y = 0;
-	    printf("inf y in PD.cpp\n");
-	    }
+// 	if(y > 100){
+// 	    y = 100;
+// 	    }
+// 	else if(y < -100){
+// 	    y = -100;
+// 	    }
+// 	else if(isnan(y)){
+// 	    y = 0;
+// 	    printf("NaN y in PD.cpp\n");
+// 	    }
+// 	else if(isinf(y)){
+// 	    y = 0;
+// 	    printf("inf y in PD.cpp\n");
+// 	    }
       }//end if abs(e)<2s
+      
 
 
      else if (e < xMaxNegativ){//Maximale negative Geschwindigkeit
@@ -132,27 +139,23 @@ void PDV::run(){
 	  printf("nothing to do in pdv.cpp/n");
       }
       
-      
-      
-      
-    
-  
+
       y_1 = y;
       e_1 = e;
       xIst_1 = xIst_0;
       xSoll_1 = xSoll_0;
       
       //Filter  
-      dxIst_1 = dxIst;
-      dxIst_2 = dxIst_1;
-      dxIst_3 = dxIst_2;
-      dxIst_4 = dxIst_3;
-      dxIst_5 = dxIst_4;
-      dxIst_6 = dxIst_5;
-      dxIst_7 = dxIst_6;
       dxIst_8 = dxIst_7;
+      dxIst_7 = dxIst_6;  
+      dxIst_6 = dxIst_5;
+      dxIst_5 = dxIst_4;
+      dxIst_4 = dxIst_3;   
+      dxIst_3 = dxIst_2;
+      dxIst_2 = dxIst_1;
+      dxIst_1 = dxIst;
 
-      
+     
 	
     //-----------------------------  set Output ------------------------------------------ 
       out_F_0.getSignal().setValue(y);

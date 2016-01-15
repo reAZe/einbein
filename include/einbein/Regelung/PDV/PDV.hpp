@@ -19,7 +19,7 @@ namespace einbein{
   class PDV : public eeros::control::Block{
     
     public:
-	      PDV(double Kp, double Kd, double M, double ts);
+	      PDV(double Kp, double Kd, double M, double Kv,  double ts);
 	      virtual ~PDV();
 	     
 	      //define inputs

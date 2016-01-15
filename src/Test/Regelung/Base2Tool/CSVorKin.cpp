@@ -12,8 +12,8 @@ CSVorKin::CSVorKin(double ts) :
     alpha1.setValue(0);
     beta1.setValue(0);
     gamma1.setValue(0);
-    enc.setValue({0.1, 0.05, 0.024});
-    FVec_Fuss.setValue({-3,1,0});
+    enc.setValue({0.1, 0.1, 0.1});
+    FVec_Fuss.setValue({0,0,2});
 
 
     

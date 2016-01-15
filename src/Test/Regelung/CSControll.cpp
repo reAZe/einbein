@@ -16,15 +16,19 @@ using namespace eeros::control;
 CSControll::CSControll(double ts) :
     encoder(ts),
     motorModell(),
-    saturation(-9.8, 9.8),	//Vorsicht, Wahl der Saturation. Nicht maximal mögliche Spannung wählen.
+    saturation(-3.3, 3.3),	//Vorsicht, Wahl der Saturation. Nicht maximal mögliche Spannung wählen. (+-9.8 V)
     i2DAC(),
     pMotor(),
     vorKinController(),
     trajektorie_xf(ts), trajektorie_yf(ts), trajektorie_zf(ts),
     deMux_Pf0(), deMux_xSoll(), deMuxConstInput(), deMux_Saturation(),
-    pDV_xf(0.222*98696.0, 0.055*454.0, 0.05, ts), pDV_yf(0.222*98696.0, 0.055*454.0, 0.05, ts), pDV_zf(0.222*98696.0, 0.05*454.0, 0.05, ts),
-    //    pDV_xf(224.0, 440.0*0.5, 0.05, ts), pDV_yf(224.0, 440.0*0.5, 0.05, ts), pDV_zf(224.0, 440.0*0.5, 0.05, ts),
-    //    pDV_xf(45.0, 88.0, 0.05, ts), pDV_yf(45.0, 88.0, 0.05, ts), pDV_zf(224.0, 440.0, 0.05, ts),
+    //pDV_xf(0.222*98696.0, 0.055*454.0, 0.05, ts), pDV_yf(0.222*98696.0, 0.055*454.0, 0.05, ts), pDV_zf(0.222*98696.0, 0.05*454.0, 0.05, ts),
+    //pDV_xf(0.5*98696.0, 0.1*454.0, 0.05, 10, ts), pDV_yf(0.5*98696.0, 0.1*454.0, 0.05, 10, ts), pDV_zf(1*98696.0, 0.15*454.0, 0.05, 12, ts),	//ohne Federn
+    // pDV_xf(0.5*98696.0, 0.1*454.0, 0.0, 20, ts), pDV_yf(0.5*98696.0, 0.1*454.0, 0.0, 20, ts), pDV_zf(0.5*98696.0, 0.1*454.0, 0.05, 20, ts), 	//nur z-Richtung ohne Federn
+    pDV_xf(0.5*98696.0, 0.1*454.0, 0.05, 10, ts), pDV_yf(0.5*98696.0, 0.1*454.0, 0.05, 10, ts), pDV_zf(1.5*98696.0, 0.15*454.0, 0.05, 20, ts),	//mit Feder --> P-Anteil z-Richtung höher
+    
+    
+    
     mux_FRegler(),
     constInput_f(),
     timedomain("Main time domain", ts, true){
@@ -54,7 +58,7 @@ CSControll::CSControll(double ts) :
 //Motor ansteuern (Motormodell)      
 /*    F_Soll.setValue({1,1,1}); //M1R M2R M3R 
     motorModell.getIn_FM_Soll().connect(F_Soll.getOut());
-    saturation.getIn().connect(motorModell.getOut_IM_Soll());
+    saturation.getIn().connect(motorModell.getOut_VM_Soll());
     i2DAC.getIn_Voltage().connect(saturation.getOut()); 
     
     timedomain.addBlock(&F_Soll);
@@ -64,29 +68,29 @@ CSControll::CSControll(double ts) :
     
 
 //Anschlagsregelung
-   F_Soll.setValue({0,0,0}); //M1R M2R M3R
-   deMuxEncoder.getIn().connect(encoder.getOut_enc());
-   deMuxdEncoder.getIn().connect(encoder.getOut_d_enc());
-   pMotor.getIn_FSoll().connect(F_Soll.getOut());
-   pMotor.getIn_enc().connect(encoder.getOut_enc());
-   pMotor.getIn_d_enc().connect(encoder.getOut_d_enc());
-   deMux_pMotor.getIn().connect(pMotor.getOut_FSollMot());
-   motorModell.getIn_FM_Soll().connect(pMotor.getOut_FSollMot());
-   saturation.getIn().connect(motorModell.getOut_IM_Soll());
-   deMux_Saturation.getIn().connect(saturation.getOut());
-   i2DAC.getIn_Voltage().connect(saturation.getOut()); 
-   
-   
-   timedomain.addBlock(&encoder);
-   timedomain.addBlock(&F_Soll);
-   timedomain.addBlock(&deMuxEncoder);
-   timedomain.addBlock(&deMuxdEncoder);
-   timedomain.addBlock(&pMotor);
-   timedomain.addBlock(&deMux_pMotor);
-   timedomain.addBlock(&motorModell);
-   timedomain.addBlock(&saturation);
-   timedomain.addBlock(&deMux_Saturation);
-   timedomain.addBlock(&i2DAC);
+//    F_Soll.setValue({0,0,0}); //M1R M2R M3R
+//    deMuxEncoder.getIn().connect(encoder.getOut_enc());
+//    deMuxdEncoder.getIn().connect(encoder.getOut_d_enc());
+//    pMotor.getIn_FSoll().connect(F_Soll.getOut());
+//    pMotor.getIn_enc().connect(encoder.getOut_enc());
+//    pMotor.getIn_d_enc().connect(encoder.getOut_d_enc());
+//    deMux_pMotor.getIn().connect(pMotor.getOut_FSollMot());
+//    motorModell.getIn_FM_Soll().connect(pMotor.getOut_FSollMot());
+//    saturation.getIn().connect(motorModell.getOut_VM_Soll());
+//    deMux_Saturation.getIn().connect(saturation.getOut());
+//    i2DAC.getIn_Voltage().connect(saturation.getOut()); 
+//    
+//    
+//    timedomain.addBlock(&encoder);
+//    timedomain.addBlock(&F_Soll);
+//    timedomain.addBlock(&deMuxEncoder);
+//    timedomain.addBlock(&deMuxdEncoder);
+//    timedomain.addBlock(&pMotor);
+//    timedomain.addBlock(&deMux_pMotor);
+//    timedomain.addBlock(&motorModell);
+//    timedomain.addBlock(&saturation);
+//    timedomain.addBlock(&deMux_Saturation);
+//    timedomain.addBlock(&i2DAC);
 
 	
       
@@ -105,7 +109,7 @@ CSControll::CSControll(double ts) :
       pMotor.getIn_enc().connect(encoder.getOut_enc());
       pMotor.getIn_d_enc().connect(encoder.getOut_d_enc());
       motorModell.getIn_FM_Soll().connect(pMotor.getOut_FSollMot());
-      saturation.getIn().connect(motorModell.getOut_IM_Soll());
+      saturation.getIn().connect(motorModell.getOut_VM_Soll());
       
       i2DAC.getIn_Voltage().connect(saturation.getOut());
       
@@ -130,7 +134,7 @@ CSControll::CSControll(double ts) :
 
 
 //Vorwärtskinemtaik mit Trajektiorenregelung
-/*
+
       x_Soll.setValue({0.0, 0.0, -0.6}); //x,y,z
       alpha1.setValue(0.0);
       beta1.setValue(0.0);
@@ -182,7 +186,7 @@ CSControll::CSControll(double ts) :
       pMotor.getIn_d_enc().connect(encoder.getOut_d_enc());
       //Motormodell
       motorModell.getIn_FM_Soll().connect(pMotor.getOut_FSollMot());
-      saturation.getIn().connect(motorModell.getOut_IM_Soll());   
+      saturation.getIn().connect(motorModell.getOut_VM_Soll());   
       deMux_Saturation.getIn().connect(saturation.getOut());
       i2DAC.getIn_Voltage().connect(saturation.getOut());
       
@@ -219,7 +223,7 @@ CSControll::CSControll(double ts) :
       timedomain.addBlock(&motorModell);
       timedomain.addBlock(&saturation);
       timedomain.addBlock(&deMux_Saturation);
-      timedomain.addBlock(&i2DAC);*/
+      timedomain.addBlock(&i2DAC);
 
 
     

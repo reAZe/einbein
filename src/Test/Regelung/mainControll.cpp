@@ -136,7 +136,7 @@ int main() {
 	
 	
 	// create control system
-	CSControll cSControll(0.0001); //schneller als Nachstellzeit PD-Regler
+	CSControll cSControll(0.001); 
 	
 	// initialize hardware
 	cSControll.start();
@@ -167,13 +167,17 @@ int main() {
 // 		
 // 		
 // 		// 		//IM
-		//std::cout << "Saturation I	: " << cSControll.saturation.getOut().getSignal().getValue() << "  [m]" << std::endl;
-		//Reset Encoder
+// 		std::cout << "USollMot		: " << cSControll.motorModell.getOut_VM_Soll().getSignal().getValue() << "  [B]" << std::endl;
+// 		std::cout << "Saturation I	: " << cSControll.saturation.getOut().getSignal().getValue() << "  [V]" << std::endl;
 		
+		
+		//Reset Encoder
 //  		std::cout << "FSollMot_p_Out	: " << cSControll.pMotor.getOut_FSollMot().getSignal().getValue() << "  [N]" << std::endl;
 //  		std::cout << "Saturation In	: " << cSControll.saturation.getIn().getSignal().getValue() << "  [N]" << std::endl;
 //  		std::cout << "Saturation Out	: " << cSControll.saturation.getOut().getSignal().getValue() << "  [N]" << std::endl; 		
 // 		std::cout << "dac		: " << cSControll.i2DAC.getIn_Voltage().getSignal().getValue() << "  [V]" << std::endl;
+		
+		
 // 		
 // // 		Ausgabe Trajektorie [xf_Trajekt, yf_Trajekt, zf_Trajekt, xf_ist, yf_ist, zf_ist, , xf_soll, yf_soll, zf_soll]
 // 		printf("%f;  %f; %f;  %f;  %f;  %f;  %f;  %f;  %f\n", 	
@@ -195,6 +199,18 @@ int main() {
 // 			cSControll.trajektorie_xf.getOut_x_d().getSignal().getValue(), cSControll.trajektorie_yf.getOut_x_d().getSignal().getValue(), cSControll.trajektorie_zf.getOut_x_d().getSignal().getValue()
 // 		  	);
 
+		//Ausgabe Regelgrösse [xf_ist, yf_ist, zf_ist,M1_Saturation, M2_Saturation, M3_Saturation]
+		
+		printf("%f;  %f;  %f;  %f;  %f;  %f; %f;  %f;  %f\n", 
+			cSControll.deMux_Pf0.getOut(0).getSignal().getValue(), cSControll.deMux_Pf0.getOut(1).getSignal().getValue(), cSControll.deMux_Pf0.getOut(2).getSignal().getValue(),
+			cSControll.pDV_xf.getOut_F_0().getSignal().getValue(), cSControll.pDV_yf.getOut_F_0().getSignal().getValue(), cSControll.pDV_zf.getOut_F_0().getSignal().getValue(),
+			cSControll.deMux_Saturation.getOut(0).getSignal().getValue(), cSControll.deMux_Saturation.getOut(1).getSignal().getValue(), cSControll.deMux_Saturation.getOut(2).getSignal().getValue()
+			);
+			
+		
+		
+		
+		
 	    
 // 		//Ausgabe Fussposition [xf_ist, yf_ist, zf_ist]
 // 		printf("%f; %f; %f; \n", 
@@ -202,28 +218,21 @@ int main() {
 // 		);
 // 		
 
-	      //Ausgabe Encoderwerte
-	      printf("%f; %f; %f; %f; %f; %f;  %f; %f; %f;  %f; %f; %f \n",
-		cSControll.deMuxEncoder.getOut(0).getSignal().getValue(), cSControll.deMuxEncoder.getOut(1).getSignal().getValue(), cSControll.deMuxEncoder.getOut(2).getSignal().getValue(),
-		cSControll.deMuxdEncoder.getOut(0).getSignal().getValue(), cSControll.deMuxdEncoder.getOut(1).getSignal().getValue(), cSControll.deMuxdEncoder.getOut(2).getSignal().getValue(),    
-		cSControll.deMux_pMotor.getOut(0).getSignal().getValue(), cSControll.deMux_pMotor.getOut(1).getSignal().getValue(), cSControll.deMux_pMotor.getOut(2).getSignal().getValue(),
-		cSControll.deMux_Saturation.getOut(0).getSignal().getValue(), cSControll.deMux_Saturation.getOut(1).getSignal().getValue(), cSControll.deMux_Saturation.getOut(2).getSignal().getValue()     
-	      );
+// 	      //Ausgabe Encoderwerte [enc1, enc2, enc3, denc1, denc2, denc3, Fsoll1, Fsoll2, Fsoll3, USat1, USat2, USat3]
+// 	      printf("%f; %f; %f; %f; %f; %f;  %f; %f; %f;  %f; %f; %f \n",
+// 		cSControll.deMuxEncoder.getOut(0).getSignal().getValue(), cSControll.deMuxEncoder.getOut(1).getSignal().getValue(), cSControll.deMuxEncoder.getOut(2).getSignal().getValue(),
+// 		cSControll.deMuxdEncoder.getOut(0).getSignal().getValue(), cSControll.deMuxdEncoder.getOut(1).getSignal().getValue(), cSControll.deMuxdEncoder.getOut(2).getSignal().getValue(),    
+// 		cSControll.deMux_pMotor.getOut(0).getSignal().getValue(), cSControll.deMux_pMotor.getOut(1).getSignal().getValue(), cSControll.deMux_pMotor.getOut(2).getSignal().getValue(),
+// 		cSControll.deMux_Saturation.getOut(0).getSignal().getValue(), cSControll.deMux_Saturation.getOut(1).getSignal().getValue(), cSControll.deMux_Saturation.getOut(2).getSignal().getValue()     
+// 	      );
 
 
 		
 	      if (!TasterRes1.get()){
 		
-		  //Vorwärtkinematik mit Kraft 
-		  /*std::cout << "\nKraft in x_Richtung eingeben \n" << std::endl;
-		  cin >> x_Richtung;
-		  std::cout << "\nKraft in y_Richtung eingeben \n" << std::endl;
-		  cin >> y_Richtung;
-		  std::cout << "\nKraft in z_Richtung eingeben \n" << std::endl;
-		  cin >> z_Richtung;
-		  
-		  cSControll.F_Soll.setValue({x_Richtung, y_Richtung, z_Richtung});*/
-		  
+
+		  /////////////////////////////////////////////////////////////////
+		  //Eingabe Position Fuss
 		  std::cout << "\nPosition in x_Richtung eingeben \n" << std::endl;
 		  cin >> x_Richtung;
 		  std::cout << "\nPosition in y_Richtung eingeben \n" << std::endl;
@@ -234,8 +243,19 @@ int main() {
 		  cSControll.x_Soll.setValue({x_Richtung, y_Richtung, z_Richtung});
 		  
 		  
-		  
-		}//end if Taster 1
+		  /////////////////////////////////////////////////////////////////
+		  //Eingabe Kraft der Motoren
+// 		  std::cout << "\nKraft Motor 1 \n" << std::endl;
+// 		  cin >> x_Richtung;
+// 		  std::cout << "\nKraft Motor 2 \n" << std::endl;
+// 		  cin >> y_Richtung;
+// 		  std::cout << "\nKraft Motor 3 \n" << std::endl;
+// 		  cin >> z_Richtung;
+// 
+// 		  cSControll.F_Soll.setValue({x_Richtung, y_Richtung, z_Richtung});
+// 		  
+// 		  
+ 		}//end if Taster 1
 		
 		
 		
@@ -268,8 +288,8 @@ int main() {
 		}//end if Taster 3
 
 		
-		//sleep(1);
-		usleep(10000);
+		sleep(1);
+		//usleep(1000);
 	}
 	
 	

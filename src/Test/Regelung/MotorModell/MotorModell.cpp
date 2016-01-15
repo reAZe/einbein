@@ -34,8 +34,9 @@ void MotorModell::run(){
       IM_Soll(1) = FM_Soll(1)/kF;
       IM_Soll(2) = FM_Soll(2)/kF;
       
-      VM_Soll = IM_Soll*1.0/0.045;
-
+      VM_Soll = IM_Soll*1.0/0.045;		//0.045 entspricht Umrechungsfaktor bei +-10V mit Imax = 0.48
+      
+      VM_Soll = IM_Soll*1.0/0.145;		//0.145 entspricht Umrechungsfaktor bei +-10V mit Imax = 1.45
       
       //-----------------------------  set Output ------------------------------------------ 
       out_VM_Soll.getSignal().setValue(VM_Soll);

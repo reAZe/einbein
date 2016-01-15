@@ -75,6 +75,10 @@ namespace einbein{
 	      double l_1, l_2, l_3;
 	      
 
+    
+	      
+	      
+	      
 //-------------------------FPf2F3i Methode------------------------------------------------	      
 	      virtual void calculateFPf2F3i(Vector3 &F31_IMU, Vector3 &F32_IMU, Vector3 &F33_IMU, Vector3 &F_Fuss_vec, Vector3 ek1_IMU,Vector3 ek2_IMU, Vector3 ek3_IMU);
 	      double F_x, F_y, F_z;
@@ -99,6 +103,13 @@ namespace einbein{
 	      eeros::math::Matrix<3,3> R_0_IMU_R_rotX;
 	      eeros::math::Matrix<3,3> R_0_IMU_R_rotY;
 	      eeros::math::Matrix<3,3> R_0_IMU_R_rotZ;
+	      
+//-----------------Rotationsmatrix R_IMU_FF_R------------------------------------------------
+	      eeros::math::Matrix<3,3> R_IMU_FF_R, R_0_FF_R;
+	      eeros::math::Matrix<3,3> R_IMU_FF_R_rotX;
+	      eeros::math::Matrix<3,3> R_IMU_FF_R_rotY;
+     
+	      
 		
 //-----------------run Methode------------------------------------------------	      
 	      //run
@@ -122,9 +133,11 @@ namespace einbein{
 	      Vector3 Pf_IMU, ek1_IMU, ek2_IMU, ek3_IMU;
 	      //Fusspunkt Im KS{0}
 	      Vector3 Pf_0;
+	      //Winkel 
+	      double alpha2_IMU, beta2_IMU, alpha2_0, beta2_0;
 	      
 	      //Kräfte
-	      Vector3 F_Fuss_vec,F31_IMU, F32_IMU, F33_IMU;
+	      Vector3 F_Fuss_vec,F_Fuss_vec_0,F31_IMU, F32_IMU, F33_IMU;
 	      Vector3 F31_M1, F32_M2, F33_M3, FMsoll;
 	      double FM1, FM2, FM3;
 	   

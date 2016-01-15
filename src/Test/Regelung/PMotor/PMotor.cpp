@@ -62,7 +62,14 @@ void PMotor::run(){
 	}
     }
   
-
+//     //ohne Anschlagsregelung
+//       for (int i = 0; i < 3; i++){
+//     FSollMot(i) = FSoll(i);
+//     }    
+  
+  
+  
+  
 	
     //-----------------------------  set Output ------------------------------------------ 
 

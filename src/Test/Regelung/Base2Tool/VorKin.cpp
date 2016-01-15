@@ -35,7 +35,7 @@ VorKin::~VorKin(){};
 
 void VorKin::run(){
 //-----------------------------  set Input-------------------------------------------------
-  alpha1	= in_alpha1.getSignal().getValue(); 
+  alpha1	= in_alpha1.getSignal().getValue(); 	//Winkel vom IMU
   beta1		= in_beta1.getSignal().getValue();   
   gamma1	= in_gamma1.getSignal().getValue();
   enc1 		= (in_enc.getSignal().getValue())(0);	//Signal 1
@@ -57,19 +57,34 @@ void VorKin::run(){
   P32_IMU     =  R_IMU_M2_R * P32_M2;
   P33_IMU     =  R_IMU_M3_R * P33_M3;
   
-  //Fusspunkt berechnen"IM {IMU}
+  //Fusspunkt berechnen im {IMU}
   calculateP3i2pf(Pf_IMU, ek1_IMU, ek2_IMU, ek3_IMU,  P31_IMU,  P32_IMU,  P33_IMU);
+  //Beinwinkel im {IMU}
+  alpha2_IMU  = atan(Pf_IMU(1)/Pf_IMU(2));
+  beta2_IMU   = atan(Pf_IMU(0)/Pf_IMU(2));
+  
+  
    
   //Rotationsmatrix "Quasigelenk x-y-z"  
   R_0_IMU_R = R_0_IMU_R_rotX.createRotX(alpha1)*(R_0_IMU_R_rotX.createRotY(beta1)*R_0_IMU_R_rotX.createRotZ(gamma1));
+  //Rotationsmatrix Kardangelenk
+  R_IMU_FF_R = R_IMU_FF_R_rotX.createRotX(alpha2_IMU)*(R_IMU_FF_R_rotX.createRotY(beta2_IMU));
+  //Rotationsmatrix von {FF} = {F'} in {0}
+  R_0_FF_R = R_0_IMU_R*R_IMU_FF_R;
+  
    
   //Fusspunkt im {0}
   Pf_0 = R_0_IMU_R*Pf_IMU;
+//   alpha2_0  = atan(Pf_0(1)/Pf_0(2));
+//   beta2_0   = atan(Pf_0(0)/Pf_0(2));
  
-
-  
   
 //------------- Motorenkraft berechnen (direkt transformierte Jacobimatrix)---------------
+ 
+  
+  //F_Fuss_vec von {F'} in {F}/(0) umrechnen.
+  F_Fuss_vec_0 = R_0_FF_R * Vector3{0,0,F_Fuss_vec(2)} + Vector3{F_Fuss_vec(0),F_Fuss_vec(1),0};
+
   
   //Kraft an Oberschenkel P3
   calculateFPf2F3i(F31_IMU, F32_IMU, F33_IMU, F_Fuss_vec, ek1_IMU, ek2_IMU, ek3_IMU);

@@ -26,7 +26,7 @@ namespace einbein{
 	      virtual eeros::control::Input<Vector3>& getIn_FM_Soll(){return in_FM_Soll;}
 	      
 	      //define outputs
-	      virtual eeros::control::Output<Vector3>& getOut_IM_Soll(){return out_VM_Soll;}
+	      virtual eeros::control::Output<Vector3>& getOut_VM_Soll(){return out_VM_Soll;}
       
 	    
     protected: 

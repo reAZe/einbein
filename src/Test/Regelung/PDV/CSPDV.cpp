@@ -11,7 +11,7 @@ using namespace eeros::control;
 CSPDV::CSPDV(double ts) :
 
     //init Block
-    pDV(3.141592653589793e+02, 6.157521601035994e+02, 0.8, 1),		//double kp_Vk, double kv_Vk, double m_Vk, double Ts
+    pDV(3.141592653589793e+02, 6.157521601035994e+02, 0.8, 2.8, 1),		//double kp_Vk, double kv_Vk, double m_Vk, double Ts
   
     timedomain("Main time domain", ts, true) {
       
