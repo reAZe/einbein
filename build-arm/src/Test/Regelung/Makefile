@@ -160,6 +160,54 @@ CSControll.cpp.s:
 	cd /home/reto/projects/einbein/build-arm && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.s
 .PHONY : CSControll.cpp.s
 
+Controller/Controller.o: Controller/Controller.cpp.o
+.PHONY : Controller/Controller.o
+
+# target to build an object file
+Controller/Controller.cpp.o:
+	cd /home/reto/projects/einbein/build-arm && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o
+.PHONY : Controller/Controller.cpp.o
+
+Controller/Controller.i: Controller/Controller.cpp.i
+.PHONY : Controller/Controller.i
+
+# target to preprocess a source file
+Controller/Controller.cpp.i:
+	cd /home/reto/projects/einbein/build-arm && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.i
+.PHONY : Controller/Controller.cpp.i
+
+Controller/Controller.s: Controller/Controller.cpp.s
+.PHONY : Controller/Controller.s
+
+# target to generate assembly for a file
+Controller/Controller.cpp.s:
+	cd /home/reto/projects/einbein/build-arm && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.s
+.PHONY : Controller/Controller.cpp.s
+
+Controller/zControll.o: Controller/zControll.cpp.o
+.PHONY : Controller/zControll.o
+
+# target to build an object file
+Controller/zControll.cpp.o:
+	cd /home/reto/projects/einbein/build-arm && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o
+.PHONY : Controller/zControll.cpp.o
+
+Controller/zControll.i: Controller/zControll.cpp.i
+.PHONY : Controller/zControll.i
+
+# target to preprocess a source file
+Controller/zControll.cpp.i:
+	cd /home/reto/projects/einbein/build-arm && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.i
+.PHONY : Controller/zControll.cpp.i
+
+Controller/zControll.s: Controller/zControll.cpp.s
+.PHONY : Controller/zControll.s
+
+# target to generate assembly for a file
+Controller/zControll.cpp.s:
+	cd /home/reto/projects/einbein/build-arm && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.s
+.PHONY : Controller/zControll.cpp.s
+
 Encoder/Encoder.o: Encoder/Encoder.cpp.o
 .PHONY : Encoder/Encoder.o
 
@@ -352,6 +400,30 @@ Trajektorie/constInput.cpp.s:
 	cd /home/reto/projects/einbein/build-arm && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Trajektorie/constInput.cpp.s
 .PHONY : Trajektorie/constInput.cpp.s
 
+ZustBest/ZustBest.o: ZustBest/ZustBest.cpp.o
+.PHONY : ZustBest/ZustBest.o
+
+# target to build an object file
+ZustBest/ZustBest.cpp.o:
+	cd /home/reto/projects/einbein/build-arm && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o
+.PHONY : ZustBest/ZustBest.cpp.o
+
+ZustBest/ZustBest.i: ZustBest/ZustBest.cpp.i
+.PHONY : ZustBest/ZustBest.i
+
+# target to preprocess a source file
+ZustBest/ZustBest.cpp.i:
+	cd /home/reto/projects/einbein/build-arm && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.i
+.PHONY : ZustBest/ZustBest.cpp.i
+
+ZustBest/ZustBest.s: ZustBest/ZustBest.cpp.s
+.PHONY : ZustBest/ZustBest.s
+
+# target to generate assembly for a file
+ZustBest/ZustBest.cpp.s:
+	cd /home/reto/projects/einbein/build-arm && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.s
+.PHONY : ZustBest/ZustBest.cpp.s
+
 mainControll.o: mainControll.cpp.o
 .PHONY : mainControll.o
 
@@ -391,6 +463,12 @@ help:
 	@echo "... CSControll.o"
 	@echo "... CSControll.i"
 	@echo "... CSControll.s"
+	@echo "... Controller/Controller.o"
+	@echo "... Controller/Controller.i"
+	@echo "... Controller/Controller.s"
+	@echo "... Controller/zControll.o"
+	@echo "... Controller/zControll.i"
+	@echo "... Controller/zControll.s"
 	@echo "... Encoder/Encoder.o"
 	@echo "... Encoder/Encoder.i"
 	@echo "... Encoder/Encoder.s"
@@ -415,6 +493,9 @@ help:
 	@echo "... Trajektorie/constInput.o"
 	@echo "... Trajektorie/constInput.i"
 	@echo "... Trajektorie/constInput.s"
+	@echo "... ZustBest/ZustBest.o"
+	@echo "... ZustBest/ZustBest.i"
+	@echo "... ZustBest/ZustBest.s"
 	@echo "... mainControll.o"
 	@echo "... mainControll.i"
 	@echo "... mainControll.s"

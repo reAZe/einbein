@@ -14,11 +14,9 @@ namespace einbein {
     ZustBest zustBest;
     IMU imu;
     Encoder encoderIMU;
-    CSZustBest(double ts);
+    CSZustBest();
     
     
-    eeros::control::DeMux<3, double> deMux_IMU_dd;
-    eeros::control::DeMux<3, double> deMux_IMU_d;  
     eeros::control::DeMux<3, double> deMux_IMU_Winkel;  
     eeros::control::DeMux<3, double> deMux_Encoder;
     

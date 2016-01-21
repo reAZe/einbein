@@ -10,6 +10,9 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/Controll.dir/Trajektorie/Trajektorie.cpp.o"
   "CMakeFiles/Controll.dir/PDV/PDV.cpp.o"
   "CMakeFiles/Controll.dir/Trajektorie/constInput.cpp.o"
+  "CMakeFiles/Controll.dir/Controller/zControll.cpp.o"
+  "CMakeFiles/Controll.dir/Controller/Controller.cpp.o"
+  "CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o"
   "Controll.pdb"
   "Controll"
 )

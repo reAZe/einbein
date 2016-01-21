@@ -27,7 +27,9 @@ src/Test/Regelung/CMakeFiles/Controll.dir/Base2Tool/VorKin.cpp.o: ../src/Test/Re
 
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/Base2Tool/VorKin.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/CSController.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/Controller/Controller.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/Controller/constantController.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/Controller/zControll.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/Encoder/Encoder.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/Encoder/TransitionBlockEncoder.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/MotorModell/I2DAC.hpp
@@ -36,6 +38,7 @@ src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/R
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/PMotor/PMotor.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/Trajektorie/Trajektorie.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/Trajektorie/constInput.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/ZustBest/ZustBest.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/templates_function.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Block.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Block1i.hpp
@@ -75,6 +78,54 @@ src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: /home/reto/eeros-fra
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: /home/reto/eeros-framework/includes/eeros/types.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: /home/reto/flinklib/include/flinklib.h
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../src/Test/Regelung/CSControll.cpp
+
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: ../include/einbein/Regelung/Base2Tool/constantFusspunkt.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: ../include/einbein/Regelung/Controller/Controller.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: ../include/einbein/Regelung/Controller/constantController.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: ../include/einbein/templates_function.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Block.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Input.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Output.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Signal.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/control/SignalInterface.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/control/TimeDomain.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/core/EEROSException.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/core/PeriodicCounter.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/core/PeriodicThread.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/core/Runnable.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/core/Statistics.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/core/Thread.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/logger/LogEntry.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/logger/LogWriter.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/logger/Logger.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/logger/Writer.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/math/Matrix.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/math/MatrixIndexOutOfBoundException.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/types.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: ../src/Test/Regelung/Controller/Controller.cpp
+
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: ../include/einbein/Regelung/Controller/zControll.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: ../include/einbein/templates_function.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Block.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Input.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Output.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Signal.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/control/SignalInterface.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/control/TimeDomain.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/core/EEROSException.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/core/PeriodicCounter.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/core/PeriodicThread.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/core/Runnable.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/core/Statistics.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/core/Thread.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/logger/LogEntry.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/logger/LogWriter.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/logger/Logger.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/logger/Writer.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/math/Matrix.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/math/MatrixIndexOutOfBoundException.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/types.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: ../src/Test/Regelung/Controller/zControll.cpp
 
 src/Test/Regelung/CMakeFiles/Controll.dir/Encoder/Encoder.cpp.o: ../include/einbein/Regelung/Base2Tool/constantFusspunkt.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/Encoder/Encoder.cpp.o: ../include/einbein/Regelung/Controller/constantController.hpp
@@ -258,9 +309,35 @@ src/Test/Regelung/CMakeFiles/Controll.dir/Trajektorie/constInput.cpp.o: /home/re
 src/Test/Regelung/CMakeFiles/Controll.dir/Trajektorie/constInput.cpp.o: /home/reto/eeros-framework/includes/eeros/types.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/Trajektorie/constInput.cpp.o: ../src/Test/Regelung/Trajektorie/constInput.cpp
 
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: ../include/einbein/Regelung/ZustBest/ZustBest.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: ../include/einbein/Regelung/ZustBest/constantZustBest.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: ../include/einbein/templates_function.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Block.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Input.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Output.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Signal.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/control/SignalInterface.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/control/TimeDomain.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/core/EEROSException.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/core/PeriodicCounter.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/core/PeriodicThread.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/core/Runnable.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/core/Statistics.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/core/Thread.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/logger/LogEntry.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/logger/LogWriter.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/logger/Logger.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/logger/Writer.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/math/Matrix.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/math/MatrixIndexOutOfBoundException.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: /home/reto/eeros-framework/includes/eeros/types.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: ../src/Test/Regelung/ZustBest/ZustBest.cpp
+
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/Base2Tool/VorKin.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/CSController.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/Controller/Controller.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/Controller/constantController.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/Controller/zControll.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/Encoder/Encoder.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/Encoder/TransitionBlockEncoder.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/MotorModell/I2DAC.hpp
@@ -269,6 +346,7 @@ src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/PMotor/PMotor.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/Trajektorie/Trajektorie.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/Trajektorie/constInput.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/ZustBest/ZustBest.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/constants.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/templates_function.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Block.hpp

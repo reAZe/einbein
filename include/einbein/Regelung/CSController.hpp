@@ -17,12 +17,13 @@
 #include "einbein/Regelung/Trajektorie/Trajektorie.hpp"
 #include "einbein/Regelung/PDV/PDV.hpp"
 #include "einbein/Regelung/Trajektorie/constInput.hpp"
-
-
+#include "einbein/Regelung/Controller/zControll.hpp"
+#include "einbein/Regelung/Controller/Controller.hpp"
+#include "einbein/Regelung/ZustBest/ZustBest.hpp"
 
 
 namespace einbein{
-
+  
 class CSControll{
   public:
   CSControll(double ts);
@@ -40,6 +41,8 @@ class CSControll{
   PDV pDV_yf;
   PDV pDV_zf;
   constInput constInput_f;
+  zControll ZControll;
+  ZustBest zustBest;
   
    
   eeros::control::Constant<Vector3> F_Soll;

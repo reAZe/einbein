@@ -199,13 +199,23 @@ int main() {
 // 			cSControll.trajektorie_xf.getOut_x_d().getSignal().getValue(), cSControll.trajektorie_yf.getOut_x_d().getSignal().getValue(), cSControll.trajektorie_zf.getOut_x_d().getSignal().getValue()
 // 		  	);
 
-		//Ausgabe Regelgrösse [xf_ist, yf_ist, zf_ist,M1_Saturation, M2_Saturation, M3_Saturation]
+// 		//Ausgabe Regelgrösse [xf_ist, yf_ist, zf_ist,M1_Saturation, M2_Saturation, M3_Saturation]
+// 		
+// 		printf("%f;  %f;  %f;  %f;  %f;  %f; %f;  %f;  %f\n", 
+// 			cSControll.deMux_Pf0.getOut(0).getSignal().getValue(), cSControll.deMux_Pf0.getOut(1).getSignal().getValue(), cSControll.deMux_Pf0.getOut(2).getSignal().getValue(),
+// 			cSControll.pDV_xf.getOut_F_0().getSignal().getValue(), cSControll.pDV_yf.getOut_F_0().getSignal().getValue(), cSControll.pDV_zf.getOut_F_0().getSignal().getValue(),
+// 			cSControll.deMux_Saturation.getOut(0).getSignal().getValue(), cSControll.deMux_Saturation.getOut(1).getSignal().getValue(), cSControll.deMux_Saturation.getOut(2).getSignal().getValue()
+// 			);
+	  
+	  
+		//Ausgabe Regelgrösse [xf_ist, yf_ist, zf_ist,M1_Saturation, M2_Saturation, M3_Saturation, Zustand]
 		
-		printf("%f;  %f;  %f;  %f;  %f;  %f; %f;  %f;  %f\n", 
+		printf("%f;  %f;  %f;  %f;  %f;  %f; %f;  %f;  %f; %d\n", 
 			cSControll.deMux_Pf0.getOut(0).getSignal().getValue(), cSControll.deMux_Pf0.getOut(1).getSignal().getValue(), cSControll.deMux_Pf0.getOut(2).getSignal().getValue(),
 			cSControll.pDV_xf.getOut_F_0().getSignal().getValue(), cSControll.pDV_yf.getOut_F_0().getSignal().getValue(), cSControll.pDV_zf.getOut_F_0().getSignal().getValue(),
-			cSControll.deMux_Saturation.getOut(0).getSignal().getValue(), cSControll.deMux_Saturation.getOut(1).getSignal().getValue(), cSControll.deMux_Saturation.getOut(2).getSignal().getValue()
-			);
+			cSControll.deMux_Saturation.getOut(0).getSignal().getValue(), cSControll.deMux_Saturation.getOut(1).getSignal().getValue(), cSControll.deMux_Saturation.getOut(2).getSignal().getValue(),
+		        cSControll.zustBest.getOut_Zustand().getSignal().getValue()
+			);	  
 			
 		
 		
@@ -289,7 +299,7 @@ int main() {
 
 		
 		sleep(1);
-		//usleep(1000);
+		//usleep(10000);
 	}
 	
 	

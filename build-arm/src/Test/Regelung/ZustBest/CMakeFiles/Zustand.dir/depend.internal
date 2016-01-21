@@ -52,6 +52,7 @@ src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/CSZustBest.cpp.o
 src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/ZustBest.cpp.o
  ../include/einbein/Regelung/ZustBest/ZustBest.hpp
  ../include/einbein/Regelung/ZustBest/constantZustBest.hpp
+ ../include/einbein/templates_function.hpp
  /home/reto/eeros-framework/includes/eeros/control/Block.hpp
  /home/reto/eeros-framework/includes/eeros/control/Input.hpp
  /home/reto/eeros-framework/includes/eeros/control/Output.hpp

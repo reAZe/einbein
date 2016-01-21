@@ -216,19 +216,6 @@ IMU/fast:
 .PHONY : IMU/fast
 
 #=============================================================================
-# Target rules for targets named Zustand
-
-# Build rule for target.
-Zustand: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Zustand
-.PHONY : Zustand
-
-# fast build rule for target.
-Zustand/fast:
-	$(MAKE) -f src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/build.make src/Test/Regelung/ZustBest/CMakeFiles/Zustand.dir/build
-.PHONY : Zustand/fast
-
-#=============================================================================
 # Target rules for targets named dacMot
 
 # Build rule for target.
@@ -284,7 +271,6 @@ help:
 	@echo "... PDV"
 	@echo "... Encoder"
 	@echo "... IMU"
-	@echo "... Zustand"
 	@echo "... dacMot"
 	@echo "... digIO"
 	@echo "... fqdMot"

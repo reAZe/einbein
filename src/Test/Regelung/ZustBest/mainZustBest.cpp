@@ -98,7 +98,7 @@ int main() {
   
   
   // create control system
-  CSZustBest csZustBest(0.001);
+  CSZustBest csZustBest();
   
  
   
@@ -159,7 +159,7 @@ int main() {
     if(hopping){
       
 //       std::cout << "Encoder: " << csZustBest.encoderIMU.getOut_enc().getSignal().getValue() << std::endl;
-      std::cout << /*"Beschleunigung: " << */csZustBest.deMux_IMU_dd.getOut(2).getSignal().getValue() << "\t" << TouchDown.get() << "\t" << csZustBest.deMux_Encoder.getOut(0).getSignal().getValue() << "\t" << csZustBest.deMux_Encoder.getOut(1).getSignal().getValue() << "\t" << csZustBest.deMux_Encoder.getOut(2).getSignal().getValue() << "\t" << csZustBest.zustBest.getOut_Zustand().getSignal().getValue() << std::endl;
+//      std::cout << /*"Beschleunigung: " << */csZustBest.deMux_IMU_dd.getOut(2).getSignal().getValue() << "\t" << TouchDown.get() << "\t" << csZustBest.deMux_Encoder.getOut(0).getSignal().getValue() << "\t" << csZustBest.deMux_Encoder.getOut(1).getSignal().getValue() << "\t" << csZustBest.deMux_Encoder.getOut(2).getSignal().getValue() << "\t" << csZustBest.zustBest.getOut_Zustand().getSignal().getValue() << std::endl;
 //       std::cout << "Geschwindigkeit: " << csZustBest.deMux_IMU_d.getOut(2).getSignal().getValue() << std::endl;
 //       printf("%f;%f;%f; %f;%f;%f\n", 
 //         csZustBest.deMux_IMU_dd.getOut(0).getSignal().getValue(), csZustBest.deMux_IMU_dd.getOut(1).getSignal().getValue(), csZustBest.deMux_IMU_dd.getOut(2).getSignal().getValue(),

@@ -75,15 +75,9 @@ namespace einbein{
 
 	      //output
 	      double F_h, xf_end_0, yf_end_0, F_beta1_x, F_beta1_z, F_alpha1_y, F_alpha1_z = 0;
-	      
-	      
-	      
+     
 	      int point;
-	      
 
-	   
-
-    
   };//end class CONTROLLER
   
   

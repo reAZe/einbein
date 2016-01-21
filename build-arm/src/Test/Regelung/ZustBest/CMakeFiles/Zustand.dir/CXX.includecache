@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../include/einbein/Regelung/Base2Tool/constantFusspunkt.hpp
-eeros/math/Matrix.hpp
--
-
 ../include/einbein/Regelung/Controller/constantController.hpp
 eeros/math/Matrix.hpp
 -
@@ -71,10 +67,6 @@ eeros/math/Matrix.hpp
 -
 
 ../include/einbein/constants.hpp
-
-../include/einbein/templates_function.hpp
-eeros/math/Matrix.hpp
--
 
 /home/reto/eeros-framework/includes/eeros/control/Block.hpp
 string
@@ -404,26 +396,6 @@ stdint.h
 stdint.h
 -
 sys/types.h
--
-
-/home/reto/projects/einbein/src/Test/Regelung/Encoder/Encoder.cpp
-cmath
--
-einbein/Regelung/Base2Tool/constantFusspunkt.hpp
--
-einbein/Regelung/Encoder/Encoder.hpp
--
-einbein/templates_function.hpp
--
-eeros/hal/FlinkFqd.hpp
--
-eeros/core/System.hpp
--
-iostream
-/home/reto/projects/einbein/src/Test/Regelung/Encoder/iostream
-
-/home/reto/projects/einbein/src/Test/Regelung/ZustBest/CSZustBest.cpp
-einbein/Regelung/ZustBest/CSZustBest.hpp
 -
 
 /home/reto/projects/einbein/src/Test/Regelung/ZustBest/mainZustBest.cpp

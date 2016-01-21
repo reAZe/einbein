@@ -64,7 +64,7 @@ void Controller::run(){
       
       //Variablen Sensor zuweisen
       alpha1_ist	      = DataImu(3);
-      beta1_ist	      = DataImu(4);
+      beta1_ist	      	      = DataImu(4);
       omega_x1_ist	      = DataImu(9);
       omega_y1_ist	      = DataImu(10);
     
@@ -82,87 +82,8 @@ void Controller::run(){
 	    break;//case 0
 	    
 	    
-	case 1: //Sinkflug
-	    F_h = 0;
-	    xf_end_0   = xf_end_intern;		yf_end_0   = yf_end_intern;
-	    F_beta1_x  = 0;        			F_beta1_z  = 0;
-	    F_alpha1_y = 0;       			F_alpha1_z = 0;
 	    
-	    //TODO PID-Regler für Höhenregelung einfügen. Siehe Simulink, Block Controller
-		    
-	    break;//case 1
-	    
-	    
-	case 2:  //Landung
-	    F_h = 0;
-	    xf_end_0   = 0;				yf_end_0   = 0;
-	    F_beta1_x  = 0;        			F_beta1_z  = 0;
-	    F_alpha1_y = 0;       			F_alpha1_z = 0;
-	    
-	    break;//case 2
-	    
-
-	case 3: //Einziehen
-	    F_h = 25;
-	    xf_end_0 =  0;			yf_end_0 =  0;
-	    
-
-	    //Plattenregelung (beta1 --> x-Richtung = Drehung um y)
-	    T_beta1 = k_beta1 *(beta1_soll-beta1_ist) + k_omega_y1 * (omega_y1_soll-omega_y1_ist);
-	    F_beta1_x = -T_beta1/rz_FussPlatte;
-	  
-	    //Plattenregelung (alpha1 --> y-Richtung = Drehung um x)
-	    T_alpha1 = k_alpha1 *(alpha1_soll-alpha1_ist) + k_omega_x1 * (omega_x1_soll-omega_x1_ist);
-	    F_alpha1_y = T_alpha1/rz_FussPlatte;
-	    
-	    break;//case 3
-	    
-	    
-	  case 4: //Scheitelpunkt am Boden
-	    F_h = 0;
-	    xf_end_0 =  0;			yf_end_0 =  0;
-	    
-	    //Plattenregelung (beta1 --> x-Richtung = Drehung um y)
-	    T_beta1 = k_beta1 *(beta1_soll-beta1_ist) + k_omega_y1 * (omega_y1_soll-omega_y1_ist);
-	    F_beta1_x = -T_beta1/rz_FussPlatte;
-	  
-	    //Plattenregelung (alpha1 --> y-Richtung = Drehung um x)
-	    T_alpha1 = k_alpha1 *(alpha1_soll-alpha1_ist) + k_omega_x1 * (omega_x1_soll-omega_x1_ist);
-	    F_alpha1_y = T_alpha1/rz_FussPlatte;
-	      
-	    break;//case 4
-	    
-	    
-	    
-	  case 5: //Schub
-	    F_h = -25;
-	    xf_end_0 =  0;			yf_end_0 =  0;
-		  
-	    //Plattenregelung (beta1 --> x-Richtung = Drehung um y)
-	    T_beta1 = k_beta1 *(beta1_soll-beta1_ist) + k_omega_y1 * (omega_y1_soll-omega_y1_ist);
-	    F_beta1_x = -T_beta1/rz_FussPlatte;
-	  
-	    //Plattenregelung (alpha1 --> y-Richtung = Drehung um x)
-	    T_alpha1 = k_alpha1 *(alpha1_soll-alpha1_ist) + k_omega_x1 * (omega_x1_soll-omega_x1_ist);
-	    F_alpha1_y = T_alpha1/rz_FussPlatte;
-	    
-	    break;//case 5
-	    
-	    
-	    
-	  case 6: //Absprung
-	    F_h = 0;
-	    xf_end_0   = 0;				yf_end_0   = 0;
-	    F_beta1_x  = 0;        			F_beta1_z  = 0;
-	    F_alpha1_y = 0;       			F_alpha1_z = 0;      
-	    posx_calc = 0;         //nächste Position des Fusspunktes kann berechnet werden
-	    posy_calc = 0;         //nächste Position des Fusspunktes kann berechnet werden
-	    
-	    break;//case 6
-	    
-	    
-	    
-	  case 7: //Steigflug
+	 case 1: //Luft
 	    F_h = 0;
 	    F_beta1_x  = 0;        			F_beta1_z  = 0;
 	    F_alpha1_y = 0;       			F_alpha1_z = 0;
@@ -217,16 +138,80 @@ void Controller::run(){
 	    xf_end_0 =  xf_end_intern;
 	    yf_end_0 =  yf_end_intern;
 	    
-	    break;//case 7
+	   //TODO PID-Regler für Höhenregelung einfügen. Siehe Simulink, Block Controller
 	    
-	      
-	  case 8: //Scheitelpunkt Luft
+	    
+	    break;//case 1
+	    
+	    
+	    
+	case 2:  //Landung
 	    F_h = 0;
-	    xf_end_0   = xf_end_intern;		yf_end_0   =  yf_end_intern;
+	    xf_end_0   = 0;				yf_end_0   = 0;
 	    F_beta1_x  = 0;        			F_beta1_z  = 0;
-	    F_alpha1_y = 0;       			F_alpha1_z = 0;  
+	    F_alpha1_y = 0;       			F_alpha1_z = 0;
+	    
+	    break;//case 2
+	    
 
-	    break;//case 8
+	case 3: //Einziehen
+	    F_h = -1000;
+	    xf_end_0 =  0;			yf_end_0 =  0;
+	    
+
+	    //Plattenregelung (beta1 --> x-Richtung = Drehung um y)
+	    T_beta1 = k_beta1 *(beta1_soll-beta1_ist) + k_omega_y1 * (omega_y1_soll-omega_y1_ist);
+	    F_beta1_x = -T_beta1/rz_FussPlatte;
+	  
+	    //Plattenregelung (alpha1 --> y-Richtung = Drehung um x)
+	    T_alpha1 = k_alpha1 *(alpha1_soll-alpha1_ist) + k_omega_x1 * (omega_x1_soll-omega_x1_ist);
+	    F_alpha1_y = T_alpha1/rz_FussPlatte;
+	    
+	    break;//case 3
+	    
+	    
+	  case 4: //Scheitelpunkt am Boden
+	    F_h = 0;
+	    xf_end_0 =  0;			yf_end_0 =  0;
+	    
+	    //Plattenregelung (beta1 --> x-Richtung = Drehung um y)
+	    T_beta1 = k_beta1 *(beta1_soll-beta1_ist) + k_omega_y1 * (omega_y1_soll-omega_y1_ist);
+	    F_beta1_x = -T_beta1/rz_FussPlatte;
+	  
+	    //Plattenregelung (alpha1 --> y-Richtung = Drehung um x)
+	    T_alpha1 = k_alpha1 *(alpha1_soll-alpha1_ist) + k_omega_x1 * (omega_x1_soll-omega_x1_ist);
+	    F_alpha1_y = T_alpha1/rz_FussPlatte;
+	      
+	    break;//case 4
+	    
+	    
+	    
+	  case 5: //Schub
+	    F_h = 1000;
+	    xf_end_0 =  0;			yf_end_0 =  0;
+		  
+	    //Plattenregelung (beta1 --> x-Richtung = Drehung um y)
+	    T_beta1 = k_beta1 *(beta1_soll-beta1_ist) + k_omega_y1 * (omega_y1_soll-omega_y1_ist);
+	    F_beta1_x = -T_beta1/rz_FussPlatte;
+	  
+	    //Plattenregelung (alpha1 --> y-Richtung = Drehung um x)
+	    T_alpha1 = k_alpha1 *(alpha1_soll-alpha1_ist) + k_omega_x1 * (omega_x1_soll-omega_x1_ist);
+	    F_alpha1_y = T_alpha1/rz_FussPlatte;
+	    
+	    break;//case 5
+	    
+	    
+	    
+	  case 6: //Absprung
+	    F_h = 0;
+	    xf_end_0   = 0;				yf_end_0   = 0;
+	    F_beta1_x  = 0;        			F_beta1_z  = 0;
+	    F_alpha1_y = 0;       			F_alpha1_z = 0;      
+	    posx_calc = 0;         //nächste Position des Fusspunktes kann berechnet werden
+	    posy_calc = 0;         //nächste Position des Fusspunktes kann berechnet werden
+	    
+	    break;//case 6
+	    
 	    
 	  default:
 	    F_h = 0;

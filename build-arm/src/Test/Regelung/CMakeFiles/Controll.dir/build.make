@@ -302,6 +302,75 @@ src/Test/Regelung/CMakeFiles/Controll.dir/Trajektorie/constInput.cpp.o.provides:
 
 src/Test/Regelung/CMakeFiles/Controll.dir/Trajektorie/constInput.cpp.o.provides.build: src/Test/Regelung/CMakeFiles/Controll.dir/Trajektorie/constInput.cpp.o
 
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: src/Test/Regelung/CMakeFiles/Controll.dir/flags.make
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: ../src/Test/Regelung/Controller/zControll.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/reto/projects/einbein/build-arm/CMakeFiles $(CMAKE_PROGRESS_12)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o"
+	cd /home/reto/projects/einbein/build-arm/src/Test/Regelung && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Controll.dir/Controller/zControll.cpp.o -c /home/reto/projects/einbein/src/Test/Regelung/Controller/zControll.cpp
+
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Controll.dir/Controller/zControll.cpp.i"
+	cd /home/reto/projects/einbein/build-arm/src/Test/Regelung && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/reto/projects/einbein/src/Test/Regelung/Controller/zControll.cpp > CMakeFiles/Controll.dir/Controller/zControll.cpp.i
+
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Controll.dir/Controller/zControll.cpp.s"
+	cd /home/reto/projects/einbein/build-arm/src/Test/Regelung && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/reto/projects/einbein/src/Test/Regelung/Controller/zControll.cpp -o CMakeFiles/Controll.dir/Controller/zControll.cpp.s
+
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o.requires:
+.PHONY : src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o.requires
+
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o.provides: src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o.requires
+	$(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o.provides.build
+.PHONY : src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o.provides
+
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o.provides.build: src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o
+
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: src/Test/Regelung/CMakeFiles/Controll.dir/flags.make
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: ../src/Test/Regelung/Controller/Controller.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/reto/projects/einbein/build-arm/CMakeFiles $(CMAKE_PROGRESS_13)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o"
+	cd /home/reto/projects/einbein/build-arm/src/Test/Regelung && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Controll.dir/Controller/Controller.cpp.o -c /home/reto/projects/einbein/src/Test/Regelung/Controller/Controller.cpp
+
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Controll.dir/Controller/Controller.cpp.i"
+	cd /home/reto/projects/einbein/build-arm/src/Test/Regelung && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/reto/projects/einbein/src/Test/Regelung/Controller/Controller.cpp > CMakeFiles/Controll.dir/Controller/Controller.cpp.i
+
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Controll.dir/Controller/Controller.cpp.s"
+	cd /home/reto/projects/einbein/build-arm/src/Test/Regelung && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/reto/projects/einbein/src/Test/Regelung/Controller/Controller.cpp -o CMakeFiles/Controll.dir/Controller/Controller.cpp.s
+
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o.requires:
+.PHONY : src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o.requires
+
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o.provides: src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o.requires
+	$(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o.provides.build
+.PHONY : src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o.provides
+
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o.provides.build: src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o
+
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: src/Test/Regelung/CMakeFiles/Controll.dir/flags.make
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o: ../src/Test/Regelung/ZustBest/ZustBest.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/reto/projects/einbein/build-arm/CMakeFiles $(CMAKE_PROGRESS_14)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o"
+	cd /home/reto/projects/einbein/build-arm/src/Test/Regelung && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o -c /home/reto/projects/einbein/src/Test/Regelung/ZustBest/ZustBest.cpp
+
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.i"
+	cd /home/reto/projects/einbein/build-arm/src/Test/Regelung && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/reto/projects/einbein/src/Test/Regelung/ZustBest/ZustBest.cpp > CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.i
+
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.s"
+	cd /home/reto/projects/einbein/build-arm/src/Test/Regelung && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/reto/projects/einbein/src/Test/Regelung/ZustBest/ZustBest.cpp -o CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.s
+
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o.requires:
+.PHONY : src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o.requires
+
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o.provides: src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o.requires
+	$(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o.provides.build
+.PHONY : src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o.provides
+
+src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o.provides.build: src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o
+
 # Object files for target Controll
 Controll_OBJECTS = \
 "CMakeFiles/Controll.dir/mainControll.cpp.o" \
@@ -314,7 +383,10 @@ Controll_OBJECTS = \
 "CMakeFiles/Controll.dir/PMotor/PMotor.cpp.o" \
 "CMakeFiles/Controll.dir/Trajektorie/Trajektorie.cpp.o" \
 "CMakeFiles/Controll.dir/PDV/PDV.cpp.o" \
-"CMakeFiles/Controll.dir/Trajektorie/constInput.cpp.o"
+"CMakeFiles/Controll.dir/Trajektorie/constInput.cpp.o" \
+"CMakeFiles/Controll.dir/Controller/zControll.cpp.o" \
+"CMakeFiles/Controll.dir/Controller/Controller.cpp.o" \
+"CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o"
 
 # External object files for target Controll
 Controll_EXTERNAL_OBJECTS =
@@ -330,6 +402,9 @@ src/Test/Regelung/Controll: src/Test/Regelung/CMakeFiles/Controll.dir/PMotor/PMo
 src/Test/Regelung/Controll: src/Test/Regelung/CMakeFiles/Controll.dir/Trajektorie/Trajektorie.cpp.o
 src/Test/Regelung/Controll: src/Test/Regelung/CMakeFiles/Controll.dir/PDV/PDV.cpp.o
 src/Test/Regelung/Controll: src/Test/Regelung/CMakeFiles/Controll.dir/Trajektorie/constInput.cpp.o
+src/Test/Regelung/Controll: src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o
+src/Test/Regelung/Controll: src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o
+src/Test/Regelung/Controll: src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o
 src/Test/Regelung/Controll: src/Test/Regelung/CMakeFiles/Controll.dir/build.make
 src/Test/Regelung/Controll: src/Test/Regelung/CMakeFiles/Controll.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable Controll"
@@ -350,6 +425,9 @@ src/Test/Regelung/CMakeFiles/Controll.dir/requires: src/Test/Regelung/CMakeFiles
 src/Test/Regelung/CMakeFiles/Controll.dir/requires: src/Test/Regelung/CMakeFiles/Controll.dir/Trajektorie/Trajektorie.cpp.o.requires
 src/Test/Regelung/CMakeFiles/Controll.dir/requires: src/Test/Regelung/CMakeFiles/Controll.dir/PDV/PDV.cpp.o.requires
 src/Test/Regelung/CMakeFiles/Controll.dir/requires: src/Test/Regelung/CMakeFiles/Controll.dir/Trajektorie/constInput.cpp.o.requires
+src/Test/Regelung/CMakeFiles/Controll.dir/requires: src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o.requires
+src/Test/Regelung/CMakeFiles/Controll.dir/requires: src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o.requires
+src/Test/Regelung/CMakeFiles/Controll.dir/requires: src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o.requires
 .PHONY : src/Test/Regelung/CMakeFiles/Controll.dir/requires
 
 src/Test/Regelung/CMakeFiles/Controll.dir/clean:
