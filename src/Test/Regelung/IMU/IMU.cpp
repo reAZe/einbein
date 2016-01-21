@@ -15,10 +15,8 @@
 
 
 extern "C"{
-//   #include "../mpu9250/mpu9250/mpu9250.h"
   #include "../src/mpu9250/mpu9250/MahonyAHRS.h"
   #include "../src/mpu9250/glue/linux_glue.h"
-  
 }
 
 
@@ -82,13 +80,10 @@ void IMU::run(){
 
   
   //Offset
-  ddxIMU(0) = ddxIMU(0) + 0.008524181122449;
-  ddxIMU(1) = ddxIMU(1) + 0.023237142857143; 
-  ddxIMU(2) = ddxIMU(2) + 0.146394056122449  + 0.001027492857143; 
-  
-  
-//       printf("%f;%f;%f; %f;%f;%f\n", 
-//        ddxIMU(0),  ddxIMU(1),  ddxIMU(2), angleIMU(0), angleIMU(1), angleIMU(2));
+  ddxIMU(VEC3_X) = ddxIMU(VEC3_X) + 0.008524181122449;
+  ddxIMU(VEC3_Y) = ddxIMU(VEC3_Y) + 0.023237142857143; 
+  ddxIMU(VEC3_Z) = ddxIMU(VEC3_Z) + 0.146394056122449  + 0.001027492857143; 
+    
      
   
   
@@ -108,18 +103,10 @@ void IMU::run(){
 
 }// end run
 
-
+/*
+* IMU initialisieren
+*/
 int IMU::init(int i2c_bus, int sample_rate){
-//   if (i2c_bus < MIN_I2C_BUS || i2c_bus > MAX_I2C_BUS) {
-//     printf("Invalid I2C bus %d\n", i2c_bus);
-//     return -1;
-//   }
-  
-//   if (sample_rate < MIN_SAMPLE_RATE || sample_rate > MAX_SAMPLE_RATE) {
-//     printf("Invalid sample rate %d\n", sample_rate);
-//     return -1;
-//   }
-
   linux_set_i2c_bus(i2c_bus);
   
   if (mpu_set_sensors(INV_XYZ_GYRO | INV_XYZ_ACCEL)) {
@@ -145,7 +132,10 @@ int IMU::init(int i2c_bus, int sample_rate){
   return 0;
 }// end init
 
-
+/*
+* Rohe Sensordaten aus den Registern des IMUs lesen und diese in
+* [g] bzw. [rad/s] umwandeln
+*/
 void IMU::getData(Matrix<3,1,double> &accel, Matrix<3,1,double> &gyro){
   unsigned char data_read[6];
   //read accel
@@ -160,14 +150,17 @@ void IMU::getData(Matrix<3,1,double> &accel, Matrix<3,1,double> &gyro){
   rawGyro(VEC3_Y) = ((short)data_read[2] << 8) | data_read[3];
   rawGyro(VEC3_Z) = ((short)data_read[4] << 8) | data_read[5];
   
+  //convert raw data
   int i;
   for(i=VEC3_X;i<(VEC3_Z+1);i++){
-    accel(i) = (float)rawAccel(i) / (ACCSENS); //OFFSET einfügen
-    gyro(i) = (float)rawGyro(i) * DEGREE_TO_RAD / (GYROSENS);  //OFFSET einfügen
+    accel(i) = (float)rawAccel(i) / (ACCSENS); //TODO OFFSET einfügen
+    gyro(i) = (float)rawGyro(i) * DEGREE_TO_RAD / (GYROSENS);  //TODO OFFSET einfügen
   } 
 }// end getData
 
-
+/*
+* Eulerwinkel mithilge der Quaternionen berechnen
+*/
 void IMU::quaternionToEuler(Matrix<4,1,double> quaternion, Matrix<3,1,double> &angleIMU){
   double q0 = quaternion[QUAT_W];
   double q1 = quaternion[QUAT_X];
@@ -179,7 +172,9 @@ void IMU::quaternionToEuler(Matrix<4,1,double> quaternion, Matrix<3,1,double> &a
   angleIMU(VEC3_Z) = atan2(2*(q0*q3+q1*q2),1-2*(q2*q2+q3*q3));
 }// end quaternionToEuler
 
-
+/*
+* Berechnen der Rotationsmatrix aus den Quaternionen
+*/
 void IMU::quaternionToRotMatr(Matrix<4,1,double> quaternion, Matrix<3,3,double> &rotMatr){
   /*
    * Rotation Matrix from the inertial frame to the body frame
@@ -190,16 +185,20 @@ void IMU::quaternionToRotMatr(Matrix<4,1,double> quaternion, Matrix<3,3,double> 
   double q3 = quaternion[QUAT_Z];
   
   rotMatr = Matrix<3,3,double>({q0*q0+q1*q1-q2*q2-q3*q3, 2*(q1*q2-q0*q3), 2*(q0*q2+q1*q3),
-			       2*(q1*q2+q0*q3), q0*q0-q1*q1+q2*q2-q3*q3, 2*(q2*q3-q0*q1),
-			       2*(q1*q3-q0*q2), 2*(q0*q1+q2*q3), q0*q0-q1*q1-q2*q2+q3*q3});//.transpose();  
+                                                      2*(q1*q2+q0*q3), q0*q0-q1*q1+q2*q2-q3*q3, 2*(q2*q3-q0*q1),
+                                                      2*(q1*q3-q0*q2), 2*(q0*q1+q2*q3), q0*q0-q1*q1-q2*q2+q3*q3});//.transpose();  
 }// end quaternionToRotMatr
 
-
+/*
+* Kompensation der Beschleunigung des IMUs mithilfe der Rotationsmatrix
+*/
 void IMU::accelCompensation(Matrix<3,3,double> rotMatr, Matrix<3,1,double> accel, Matrix<3,1,double> &ddxIMU){
   ddxIMU = (accel + rotMatr * Matrix<3,1,double>({0.0, 0.0, -1.0}))*9.81;
 }// end accelCompensation
 
-
+/*
+* Geschwindigkeit und Position durch Integration berechnen
+*/
 void IMU::positionVelocity(Matrix<3,1,double> ddxIMU, Matrix<3,1,double> &dxIMU, Matrix<3,1,double> &xIMU){
   dxIMU = dxIMU_1 + (ddxIMU+ddxIMU_1)*Ts/2; 
   xIMU = xIMU_1 + (dxIMU+dxIMU_1)*Ts/2; 
@@ -208,7 +207,9 @@ void IMU::positionVelocity(Matrix<3,1,double> ddxIMU, Matrix<3,1,double> &dxIMU,
   xIMU_1 = xIMU;
 }// end positionVelocity
 
-
+/*
+* Berechnung der Winkelgeschwindigkeit durch Integration der einzelnen Winkel
+*/
 void IMU::angularvelocity(Matrix<3,1,double> angleIMU, Matrix<3,1,double> &dangleIMU){
   dangleIMU = (angleIMU - angleIMU_1)/Ts;
   
