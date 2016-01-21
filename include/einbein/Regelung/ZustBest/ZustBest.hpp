@@ -47,8 +47,6 @@ namespace einbein{
     int Zustand;
     
     double Ts; 
-    Vector3 enc_dif, enc_1;
-
     
     
   };// end class ZustBest

@@ -12,7 +12,6 @@ using namespace eeros::math;
 //Konstruktor
 ZustBest::ZustBest(){
   Zustand = 1; //Anfangszustand
-  enc_1 = Vector3({0,0,0});
 };
 
 //Destruktor
@@ -38,34 +37,32 @@ void ZustBest::run(){
 
   enc		= in_enc.getSignal().getValue();
   denc 		= in_denc.getSignal().getValue();
-   
-  enc_dif = enc - enc_1;
-  
+     
   
   //----------------------------- run -----------------------------
   switch (Zustand){
-    case 1:
-       // if(enc_dif(0) < -toleranzBoden) { 
-// 	if(((enc_dif(0) < -toleranzBoden) && (enc_dif(1) < -toleranzBoden)) || ((enc_dif(0) < -toleranzBoden) && (enc_dif(2) < -toleranzBoden)) || ((enc_dif(1) < -toleranzBoden) && (enc_dif(2) < -toleranzBoden))){
-//             Zustand = 2;
-// 	}
-      
-      if(((denc(0) < toleranzBodenGeschw) && (denc(1) < toleranzBodenGeschw)) || ((denc(0) < toleranzBodenGeschw) && (denc(2) < toleranzBodenGeschw)) || ((denc(1) < toleranzBodenGeschw) && (denc(2) < toleranzBodenGeschw))){
+    case 1://Sinkflug
+        if(((denc(0) < toleranzBodenGeschw) && (denc(1) < toleranzBodenGeschw)) || ((denc(0) < toleranzBodenGeschw) && (denc(2) < toleranzBodenGeschw)) || ((denc(1) < toleranzBodenGeschw) && (denc(2) < toleranzBodenGeschw))){
             Zustand = 2;
 	}
       
 	break; //case 1
         
 
-    case 2:
-       //usleep(1000);
+    case 2://Landung
        Zustand = 3;
+       usleep(1000);
        break; //case 2
 
-    case 3: //es wird nur ein Encoder beobachtet
-        if ((-0.005 <= denc(0)) && (denc(0) <= 0.005)){ 
-                Zustand = 4;
+    case 3: //Scheitelpunkt Boden: es wird nur ein Encoder beobachtet
+      if(norm(enc) < 0.078){
+	for(unsigned i = 0; i <= 2; ++i){
+	  if ((-toleranzScheitelBodenGeschw <= denc(i)) && (denc(i) <= toleranzScheitelBodenGeschw)){ 
+		  Zustand = 4;
+		  usleep(5000);	//warten, dass Umkehrpunkt sicher erreicht ist
+	  }
 	}
+      }
 	break; //case 3
 	
     case 4:
@@ -86,7 +83,7 @@ void ZustBest::run(){
       
   }//enc case Zustand
   
-  enc_1 = enc;
+
   
   
   //----------------------------- set Output -----------------------------

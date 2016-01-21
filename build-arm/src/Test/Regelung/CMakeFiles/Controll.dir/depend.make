@@ -104,6 +104,7 @@ src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/ret
 src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: /home/reto/eeros-framework/includes/eeros/types.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o: ../src/Test/Regelung/Controller/Controller.cpp
 
+src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: ../include/einbein/Regelung/Controller/constantController.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: ../include/einbein/Regelung/Controller/zControll.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: ../include/einbein/templates_function.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Block.hpp

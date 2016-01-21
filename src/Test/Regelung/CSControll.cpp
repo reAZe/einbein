@@ -16,7 +16,7 @@ using namespace eeros::control;
 CSControll::CSControll(double ts) :
     encoder(ts),
     motorModell(),
-    saturation(-6.0, 6.0),	//Vorsicht, Wahl der Saturation. Nicht maximal mögliche Spannung wählen. (+-9.8 V)
+    saturation(-9.8, 9.8),	//Vorsicht, Wahl der Saturation. Nicht maximal mögliche Spannung wählen. (+-9.8 V)
     i2DAC(),
     pMotor(),
     vorKinController(),
@@ -341,11 +341,10 @@ CSControll::CSControll(double ts) :
       //Demux Encoder
       deMuxEncoder.getIn().connect(encoder.getOut_enc());
       deMuxdEncoder.getIn().connect(encoder.getOut_d_enc());
-      ZControll.getIn_dEncoder().connect(deMuxdEncoder.getOut(0));
-      //Mux Regler Kraft
+            //Mux Regler Kraft
       mux_FRegler.getIn(0).connect(pDV_xf.getOut_F_0());
       mux_FRegler.getIn(1).connect(pDV_yf.getOut_F_0());
-      mux_FRegler.getIn(2).connect(ZControll.getOut_Fz());     //Kraft in z-Richtung
+      mux_FRegler.getIn(2).connect(ZControll.getOut_F_z());     //Kraft in z-Richtung
       //Vorwärtskimematik
       vorKinController.getIn_F_Fuss_vec().connect(mux_FRegler.getOut());
       vorKinController.getIn_alpha1().connect(alpha1.getOut());

@@ -208,17 +208,21 @@ int main() {
 // 			);
 	  
 	  
-		//Ausgabe Regelgrösse [xf_ist, yf_ist, zf_ist,M1_Saturation, M2_Saturation, M3_Saturation, Zustand]
+// 		//Ausgabe Regelgrösse [xf_ist, yf_ist, zf_ist,M1_Saturation, M2_Saturation, M3_Saturation, Zustand]		
+// 		printf("%f;  %f;  %f;  %f;  %f;  %f; %f;  %f;  %f; %d\n", 
+// 			cSControll.deMux_Pf0.getOut(0).getSignal().getValue(), cSControll.deMux_Pf0.getOut(1).getSignal().getValue(), cSControll.deMux_Pf0.getOut(2).getSignal().getValue(),
+// 			cSControll.pDV_xf.getOut_F_0().getSignal().getValue(), cSControll.pDV_yf.getOut_F_0().getSignal().getValue(), cSControll.pDV_zf.getOut_F_0().getSignal().getValue(),
+// 			cSControll.deMux_Saturation.getOut(0).getSignal().getValue(), cSControll.deMux_Saturation.getOut(1).getSignal().getValue(), cSControll.deMux_Saturation.getOut(2).getSignal().getValue(),
+// 		        cSControll.zustBest.getOut_Zustand().getSignal().getValue()
+// 			);
 		
-		printf("%f;  %f;  %f;  %f;  %f;  %f; %f;  %f;  %f; %d\n", 
-			cSControll.deMux_Pf0.getOut(0).getSignal().getValue(), cSControll.deMux_Pf0.getOut(1).getSignal().getValue(), cSControll.deMux_Pf0.getOut(2).getSignal().getValue(),
-			cSControll.pDV_xf.getOut_F_0().getSignal().getValue(), cSControll.pDV_yf.getOut_F_0().getSignal().getValue(), cSControll.pDV_zf.getOut_F_0().getSignal().getValue(),
-			cSControll.deMux_Saturation.getOut(0).getSignal().getValue(), cSControll.deMux_Saturation.getOut(1).getSignal().getValue(), cSControll.deMux_Saturation.getOut(2).getSignal().getValue(),
+		//Ausgabe Zustand und Kraft in Fz (hüpfen) [enc(0), enc(1), enc(2), denc(0), denc(1), denc(2), F_z, Zustand ]
+		printf("%f;  %f;  %f; %f;  %f;  %f; %f; %d\n",
+			cSControll.deMuxEncoder.getOut(0).getSignal().getValue(), cSControll.deMuxEncoder.getOut(1).getSignal().getValue(), cSControll.deMuxEncoder.getOut(2).getSignal().getValue(),
+			cSControll.deMuxdEncoder.getOut(0).getSignal().getValue(), cSControll.deMuxdEncoder.getOut(1).getSignal().getValue(), cSControll.deMuxdEncoder.getOut(2).getSignal().getValue(),
+			cSControll.ZControll.getOut_F_z().getSignal().getValue(),
 		        cSControll.zustBest.getOut_Zustand().getSignal().getValue()
-			);	  
-			
-		
-		
+		);
 		
 		
 	    
@@ -298,8 +302,8 @@ int main() {
 		}//end if Taster 3
 
 		
-		sleep(1);
-		//usleep(10000);
+		//sleep(1);
+		usleep(5000);
 	}
 	
 	

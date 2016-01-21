@@ -87,7 +87,7 @@ void VorKin::run(){
 
   
   //Kraft an Oberschenkel P3
-  calculateFPf2F3i(F31_IMU, F32_IMU, F33_IMU, F_Fuss_vec, ek1_IMU, ek2_IMU, ek3_IMU);
+  calculateFPf2F3i(F31_IMU, F32_IMU, F33_IMU, F_Fuss_vec_0, ek1_IMU, ek2_IMU, ek3_IMU);
 
   
   //Transformation der Kraft in das KS {Mi}
