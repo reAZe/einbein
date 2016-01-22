@@ -16,7 +16,7 @@ using namespace eeros::math;
 namespace einbein{
   class ZustBest : public eeros::control::Block{
   public:
-    ZustBest();
+    ZustBest(double Ts);
     virtual ~ZustBest();
     
     //define inputs
@@ -26,7 +26,7 @@ namespace einbein{
     //define outputs
     virtual eeros::control::Output<int>& getOut_Zustand(){return out_Zustand;}
     
-    
+
     
   protected:
     //define inputs
@@ -41,12 +41,14 @@ namespace einbein{
   private:
     virtual void run();
     
-    double  dz_dif;
-    Vector3 enc, denc;
+    Vector3 enc, denc; 
+    int Zustand; 
+    double ts; 
     
-    int Zustand;
     
-    double Ts; 
+    //waitFunction
+    bool waitFunction(double time, double Ts);
+    int i_wait;  
     
     
   };// end class ZustBest

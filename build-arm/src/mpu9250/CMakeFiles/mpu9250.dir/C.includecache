@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/reto/projects/einbein/src/mpu9250/eMPL/dmpKey.h
+
+/home/reto/projects/einbein/src/mpu9250/eMPL/dmpmap.h
+
 /home/reto/projects/einbein/src/mpu9250/eMPL/inv_mpu.c
 stdio.h
 -
@@ -24,6 +28,54 @@ inv_mpu.h
 
 /home/reto/projects/einbein/src/mpu9250/eMPL/inv_mpu.h
 
+/home/reto/projects/einbein/src/mpu9250/eMPL/inv_mpu_dmp_motion_driver.c
+stdio.h
+-
+stdint.h
+-
+stdlib.h
+-
+string.h
+-
+math.h
+-
+inv_mpu.h
+/home/reto/projects/einbein/src/mpu9250/eMPL/inv_mpu.h
+inv_mpu_dmp_motion_driver.h
+/home/reto/projects/einbein/src/mpu9250/eMPL/inv_mpu_dmp_motion_driver.h
+dmpKey.h
+/home/reto/projects/einbein/src/mpu9250/eMPL/dmpKey.h
+dmpmap.h
+/home/reto/projects/einbein/src/mpu9250/eMPL/dmpmap.h
+../glue/linux_glue.h
+/home/reto/projects/einbein/src/mpu9250/glue/linux_glue.h
+
+/home/reto/projects/einbein/src/mpu9250/eMPL/inv_mpu_dmp_motion_driver.h
+
+/home/reto/projects/einbein/src/mpu9250/glue/linux_glue.c
+time.h
+-
+sys/time.h
+-
+errno.h
+-
+string.h
+-
+unistd.h
+-
+stdint.h
+-
+sys/ioctl.h
+-
+sys/types.h
+-
+fcntl.h
+-
+linux/i2c-dev.h
+-
+linux_glue.h
+/home/reto/projects/einbein/src/mpu9250/glue/linux_glue.h
+
 /home/reto/projects/einbein/src/mpu9250/glue/linux_glue.h
 stdlib.h
 -
@@ -33,4 +85,12 @@ math.h
 -
 ../eMPL/inv_mpu.h
 /home/reto/projects/einbein/src/mpu9250/eMPL/inv_mpu.h
+
+/home/reto/projects/einbein/src/mpu9250/mpu9250/MahonyAHRS.c
+MahonyAHRS.h
+/home/reto/projects/einbein/src/mpu9250/mpu9250/MahonyAHRS.h
+math.h
+-
+
+/home/reto/projects/einbein/src/mpu9250/mpu9250/MahonyAHRS.h
 

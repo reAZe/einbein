@@ -371,6 +371,29 @@ src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o.provides: src/
 
 src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o.provides.build: src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o
 
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: src/Test/Regelung/CMakeFiles/Controll.dir/flags.make
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: ../src/Test/Regelung/IMU/IMU.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/reto/projects/einbein/build-arm/CMakeFiles $(CMAKE_PROGRESS_15)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o"
+	cd /home/reto/projects/einbein/build-arm/src/Test/Regelung && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Controll.dir/IMU/IMU.cpp.o -c /home/reto/projects/einbein/src/Test/Regelung/IMU/IMU.cpp
+
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Controll.dir/IMU/IMU.cpp.i"
+	cd /home/reto/projects/einbein/build-arm/src/Test/Regelung && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/reto/projects/einbein/src/Test/Regelung/IMU/IMU.cpp > CMakeFiles/Controll.dir/IMU/IMU.cpp.i
+
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Controll.dir/IMU/IMU.cpp.s"
+	cd /home/reto/projects/einbein/build-arm/src/Test/Regelung && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/reto/projects/einbein/src/Test/Regelung/IMU/IMU.cpp -o CMakeFiles/Controll.dir/IMU/IMU.cpp.s
+
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o.requires:
+.PHONY : src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o.requires
+
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o.provides: src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o.requires
+	$(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o.provides.build
+.PHONY : src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o.provides
+
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o.provides.build: src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o
+
 # Object files for target Controll
 Controll_OBJECTS = \
 "CMakeFiles/Controll.dir/mainControll.cpp.o" \
@@ -386,7 +409,8 @@ Controll_OBJECTS = \
 "CMakeFiles/Controll.dir/Trajektorie/constInput.cpp.o" \
 "CMakeFiles/Controll.dir/Controller/zControll.cpp.o" \
 "CMakeFiles/Controll.dir/Controller/Controller.cpp.o" \
-"CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o"
+"CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o" \
+"CMakeFiles/Controll.dir/IMU/IMU.cpp.o"
 
 # External object files for target Controll
 Controll_EXTERNAL_OBJECTS =
@@ -405,7 +429,9 @@ src/Test/Regelung/Controll: src/Test/Regelung/CMakeFiles/Controll.dir/Trajektori
 src/Test/Regelung/Controll: src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o
 src/Test/Regelung/Controll: src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o
 src/Test/Regelung/Controll: src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o
+src/Test/Regelung/Controll: src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o
 src/Test/Regelung/Controll: src/Test/Regelung/CMakeFiles/Controll.dir/build.make
+src/Test/Regelung/Controll: src/mpu9250/libmpu9250.a
 src/Test/Regelung/Controll: src/Test/Regelung/CMakeFiles/Controll.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable Controll"
 	cd /home/reto/projects/einbein/build-arm/src/Test/Regelung && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Controll.dir/link.txt --verbose=$(VERBOSE)
@@ -428,6 +454,7 @@ src/Test/Regelung/CMakeFiles/Controll.dir/requires: src/Test/Regelung/CMakeFiles
 src/Test/Regelung/CMakeFiles/Controll.dir/requires: src/Test/Regelung/CMakeFiles/Controll.dir/Controller/zControll.cpp.o.requires
 src/Test/Regelung/CMakeFiles/Controll.dir/requires: src/Test/Regelung/CMakeFiles/Controll.dir/Controller/Controller.cpp.o.requires
 src/Test/Regelung/CMakeFiles/Controll.dir/requires: src/Test/Regelung/CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o.requires
+src/Test/Regelung/CMakeFiles/Controll.dir/requires: src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o.requires
 .PHONY : src/Test/Regelung/CMakeFiles/Controll.dir/requires
 
 src/Test/Regelung/CMakeFiles/Controll.dir/clean:

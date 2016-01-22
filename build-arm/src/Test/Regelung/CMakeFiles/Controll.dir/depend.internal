@@ -33,6 +33,7 @@ src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o
  ../include/einbein/Regelung/Controller/zControll.hpp
  ../include/einbein/Regelung/Encoder/Encoder.hpp
  ../include/einbein/Regelung/Encoder/TransitionBlockEncoder.hpp
+ ../include/einbein/Regelung/IMU/IMU.hpp
  ../include/einbein/Regelung/MotorModell/I2DAC.hpp
  ../include/einbein/Regelung/MotorModell/MotorModell.hpp
  ../include/einbein/Regelung/PDV/PDV.hpp
@@ -176,6 +177,37 @@ src/Test/Regelung/CMakeFiles/Controll.dir/Encoder/TransitionBlockEncoder.cpp.o
  /home/reto/eeros-framework/includes/eeros/math/MatrixIndexOutOfBoundException.hpp
  /home/reto/eeros-framework/includes/eeros/types.hpp
  /home/reto/projects/einbein/src/Test/Regelung/Encoder/TransitionBlockEncoder.cpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o
+ ../include/einbein/Regelung/IMU/IMU.hpp
+ ../src/mpu9250/eMPL/inv_mpu.h
+ ../src/mpu9250/glue/linux_glue.h
+ ../src/mpu9250/mpu9250/MahonyAHRS.h
+ /home/reto/eeros-framework/includes/eeros/control/Block.hpp
+ /home/reto/eeros-framework/includes/eeros/control/Block1o.hpp
+ /home/reto/eeros-framework/includes/eeros/control/Input.hpp
+ /home/reto/eeros-framework/includes/eeros/control/Output.hpp
+ /home/reto/eeros-framework/includes/eeros/control/PeripheralInput.hpp
+ /home/reto/eeros-framework/includes/eeros/control/Signal.hpp
+ /home/reto/eeros-framework/includes/eeros/control/SignalInterface.hpp
+ /home/reto/eeros-framework/includes/eeros/control/TimeDomain.hpp
+ /home/reto/eeros-framework/includes/eeros/core/EEROSException.hpp
+ /home/reto/eeros-framework/includes/eeros/core/PeriodicCounter.hpp
+ /home/reto/eeros-framework/includes/eeros/core/PeriodicThread.hpp
+ /home/reto/eeros-framework/includes/eeros/core/Runnable.hpp
+ /home/reto/eeros-framework/includes/eeros/core/Statistics.hpp
+ /home/reto/eeros-framework/includes/eeros/core/System.hpp
+ /home/reto/eeros-framework/includes/eeros/core/Thread.hpp
+ /home/reto/eeros-framework/includes/eeros/hal/HAL.hpp
+ /home/reto/eeros-framework/includes/eeros/hal/PeripheralInput.hpp
+ /home/reto/eeros-framework/includes/eeros/hal/PeripheralOutput.hpp
+ /home/reto/eeros-framework/includes/eeros/logger/LogEntry.hpp
+ /home/reto/eeros-framework/includes/eeros/logger/LogWriter.hpp
+ /home/reto/eeros-framework/includes/eeros/logger/Logger.hpp
+ /home/reto/eeros-framework/includes/eeros/logger/Writer.hpp
+ /home/reto/eeros-framework/includes/eeros/math/Matrix.hpp
+ /home/reto/eeros-framework/includes/eeros/math/MatrixIndexOutOfBoundException.hpp
+ /home/reto/eeros-framework/includes/eeros/types.hpp
+ /home/reto/projects/einbein/src/Test/Regelung/IMU/IMU.cpp
 src/Test/Regelung/CMakeFiles/Controll.dir/MotorModell/I2DAC.cpp.o
  ../include/einbein/Regelung/MotorModell/I2DAC.hpp
  /home/reto/eeros-framework/includes/eeros/control/Block.hpp
@@ -342,6 +374,7 @@ src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o
  ../include/einbein/Regelung/Controller/zControll.hpp
  ../include/einbein/Regelung/Encoder/Encoder.hpp
  ../include/einbein/Regelung/Encoder/TransitionBlockEncoder.hpp
+ ../include/einbein/Regelung/IMU/IMU.hpp
  ../include/einbein/Regelung/MotorModell/I2DAC.hpp
  ../include/einbein/Regelung/MotorModell/MotorModell.hpp
  ../include/einbein/Regelung/PDV/PDV.hpp

@@ -32,6 +32,7 @@ src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/R
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/Controller/zControll.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/Encoder/Encoder.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/Encoder/TransitionBlockEncoder.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/IMU/IMU.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/MotorModell/I2DAC.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/MotorModell/MotorModell.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/CSControll.cpp.o: ../include/einbein/Regelung/PDV/PDV.hpp
@@ -175,6 +176,37 @@ src/Test/Regelung/CMakeFiles/Controll.dir/Encoder/TransitionBlockEncoder.cpp.o: 
 src/Test/Regelung/CMakeFiles/Controll.dir/Encoder/TransitionBlockEncoder.cpp.o: /home/reto/eeros-framework/includes/eeros/math/MatrixIndexOutOfBoundException.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/Encoder/TransitionBlockEncoder.cpp.o: /home/reto/eeros-framework/includes/eeros/types.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/Encoder/TransitionBlockEncoder.cpp.o: ../src/Test/Regelung/Encoder/TransitionBlockEncoder.cpp
+
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: ../include/einbein/Regelung/IMU/IMU.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: ../src/mpu9250/eMPL/inv_mpu.h
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: ../src/mpu9250/glue/linux_glue.h
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: ../src/mpu9250/mpu9250/MahonyAHRS.h
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Block.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Block1o.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Input.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Output.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/control/PeripheralInput.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Signal.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/control/SignalInterface.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/control/TimeDomain.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/core/EEROSException.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/core/PeriodicCounter.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/core/PeriodicThread.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/core/Runnable.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/core/Statistics.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/core/System.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/core/Thread.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/hal/HAL.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/hal/PeripheralInput.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/hal/PeripheralOutput.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/logger/LogEntry.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/logger/LogWriter.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/logger/Logger.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/logger/Writer.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/math/Matrix.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/math/MatrixIndexOutOfBoundException.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: /home/reto/eeros-framework/includes/eeros/types.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o: ../src/Test/Regelung/IMU/IMU.cpp
 
 src/Test/Regelung/CMakeFiles/Controll.dir/MotorModell/I2DAC.cpp.o: ../include/einbein/Regelung/MotorModell/I2DAC.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/MotorModell/I2DAC.cpp.o: /home/reto/eeros-framework/includes/eeros/control/Block.hpp
@@ -341,6 +373,7 @@ src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/Controller/zControll.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/Encoder/Encoder.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/Encoder/TransitionBlockEncoder.hpp
+src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/IMU/IMU.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/MotorModell/I2DAC.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/MotorModell/MotorModell.hpp
 src/Test/Regelung/CMakeFiles/Controll.dir/mainControll.cpp.o: ../include/einbein/Regelung/PDV/PDV.hpp

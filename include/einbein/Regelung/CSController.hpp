@@ -20,7 +20,7 @@
 #include "einbein/Regelung/Controller/zControll.hpp"
 #include "einbein/Regelung/Controller/Controller.hpp"
 #include "einbein/Regelung/ZustBest/ZustBest.hpp"
-
+#include "einbein/Regelung/IMU/IMU.hpp"
 
 namespace einbein{
   
@@ -43,7 +43,8 @@ class CSControll{
   constInput constInput_f;
   zControll ZControll;
   ZustBest zustBest;
-  
+
+
    
   eeros::control::Constant<Vector3> F_Soll;
   eeros::control::Constant<Vector3> x_Soll;
@@ -60,6 +61,7 @@ class CSControll{
   eeros::control::DeMux<3, double> deMuxEncoder;
   eeros::control::DeMux<3, double> deMux_pMotor;
   eeros::control::Mux<3, double> mux_FRegler;
+  
  
   
   void start();

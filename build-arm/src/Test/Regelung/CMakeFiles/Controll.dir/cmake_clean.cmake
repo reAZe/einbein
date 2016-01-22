@@ -13,6 +13,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/Controll.dir/Controller/zControll.cpp.o"
   "CMakeFiles/Controll.dir/Controller/Controller.cpp.o"
   "CMakeFiles/Controll.dir/ZustBest/ZustBest.cpp.o"
+  "CMakeFiles/Controll.dir/IMU/IMU.cpp.o"
   "Controll.pdb"
   "Controll"
 )

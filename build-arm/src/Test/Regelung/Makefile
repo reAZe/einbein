@@ -256,6 +256,30 @@ Encoder/TransitionBlockEncoder.cpp.s:
 	cd /home/reto/projects/einbein/build-arm && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/Encoder/TransitionBlockEncoder.cpp.s
 .PHONY : Encoder/TransitionBlockEncoder.cpp.s
 
+IMU/IMU.o: IMU/IMU.cpp.o
+.PHONY : IMU/IMU.o
+
+# target to build an object file
+IMU/IMU.cpp.o:
+	cd /home/reto/projects/einbein/build-arm && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.o
+.PHONY : IMU/IMU.cpp.o
+
+IMU/IMU.i: IMU/IMU.cpp.i
+.PHONY : IMU/IMU.i
+
+# target to preprocess a source file
+IMU/IMU.cpp.i:
+	cd /home/reto/projects/einbein/build-arm && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.i
+.PHONY : IMU/IMU.cpp.i
+
+IMU/IMU.s: IMU/IMU.cpp.s
+.PHONY : IMU/IMU.s
+
+# target to generate assembly for a file
+IMU/IMU.cpp.s:
+	cd /home/reto/projects/einbein/build-arm && $(MAKE) -f src/Test/Regelung/CMakeFiles/Controll.dir/build.make src/Test/Regelung/CMakeFiles/Controll.dir/IMU/IMU.cpp.s
+.PHONY : IMU/IMU.cpp.s
+
 MotorModell/I2DAC.o: MotorModell/I2DAC.cpp.o
 .PHONY : MotorModell/I2DAC.o
 
@@ -475,6 +499,9 @@ help:
 	@echo "... Encoder/TransitionBlockEncoder.o"
 	@echo "... Encoder/TransitionBlockEncoder.i"
 	@echo "... Encoder/TransitionBlockEncoder.s"
+	@echo "... IMU/IMU.o"
+	@echo "... IMU/IMU.i"
+	@echo "... IMU/IMU.s"
 	@echo "... MotorModell/I2DAC.o"
 	@echo "... MotorModell/I2DAC.i"
 	@echo "... MotorModell/I2DAC.s"
